@@ -1,0 +1,32 @@
+{
+	"name": "mediawiki/semantic-meeting-minutes",
+	"type": "mediawiki-extension",
+	"description": "Method of entering meeting minutes into MediaWiki using Semantic Forms and displaying minutes on related pages",
+	"keywords": [
+		"MediaWiki",
+		"SMW",
+		"Semantic MediaWiki"
+	],
+	"homepage": "https://github.com/EnterpriseMW/MeetingMinutes",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "James Montalvo",
+			"email": "jamesmontalvo3@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"irc": "irc://irc.freenode.net/mediawiki"
+	},
+	"require": {
+		"php": ">=5.3.0",
+		"mediawiki/numer-alpha": "dev-master",
+		"mediawiki/header-footer": "dev-master"
+	},
+	"autoload": {
+		"files" : [
+			"MeetingMinutes.php"
+		]
+	}
+}

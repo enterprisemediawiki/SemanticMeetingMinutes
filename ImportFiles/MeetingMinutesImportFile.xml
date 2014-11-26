@@ -1,0 +1,1038 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.8/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.8/ http://www.mediawiki.org/xml/export-0.8.xsd" version="0.8" xml:lang="en">
+  <siteinfo>
+    <sitename>EVA Wiki</sitename>
+    <base>https://mod-dev2.jsc.nasa.gov/wiki/EVA/index.php?title=Main_Page</base>
+    <generator>MediaWiki 1.23.2</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">EVA Wiki</namespace>
+      <namespace key="5" case="first-letter">EVA Wiki talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="102" case="first-letter">Property</namespace>
+      <namespace key="103" case="first-letter">Property talk</namespace>
+      <namespace key="104" case="first-letter">Type</namespace>
+      <namespace key="105" case="first-letter">Type talk</namespace>
+      <namespace key="106" case="first-letter">Form</namespace>
+      <namespace key="107" case="first-letter">Form talk</namespace>
+      <namespace key="108" case="first-letter">Concept</namespace>
+      <namespace key="109" case="first-letter">Concept talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Template:Meeting Minutes Block</title>
+    <ns>10</ns>
+    <id>10445</id>
+    <revision>
+      <id>48153</id>
+      <parentid>48151</parentid>
+      <timestamp>2014-06-30T23:37:17Z</timestamp>
+      <contributor>
+        <username>Lwelsh</username>
+        <id>2</id>
+      </contributor>
+      <text xml:space="preserve" bytes="1702">&lt;!--
+
+         Meetings after today (future ... in the year 2000)
+
+--&gt;__NOTOC__&lt;table class=&quot;main-page-meeting-minutes-box main-page-meeting-minutes-box-yellow&quot; style=&quot;width:100%;&quot;&gt;&lt;tr&gt;&lt;th style=&quot;padding-top:10px; padding-bottom: 10px;&quot;&gt;Meeting Minutes&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;table&gt;&lt;tr&gt;&lt;td style=&quot;width:100%;margin:5px 0px 0px 0px;&quot;&gt;[[Special:FormEdit/Meeting Minutes|+ Add minutes]]&lt;/td&gt;&lt;/tr&gt;
+{{#ask: [[Category:Meeting Minutes]] [[Meeting date::&gt;&gt; {{#time: d F Y }} ]] [[Meeting date::&lt; {{#time: d F Y | +370 days}} ]]
+| ?Meeting type = Type
+| ?Meeting date = Date
+| sort = Meeting date, Start time
+| order = desc
+| limit = 30
+| link = none
+| default = 
+| intro = 
+| outro = 
+| format = template
+| template = Meeting Minutes Block info for table row
+| searchlabel = 
+}}&lt;!--
+
+         Meetings today (present)
+
+--&gt;{{#ask: [[Category:Meeting Minutes]] [[Meeting date:: {{#time: d F Y }} ]]
+| ?Meeting type = Type
+| ?Meeting date = Date
+| sort = Meeting date, Start time
+| order = desc
+| limit = 30
+| link = none
+| default = 
+| intro = 
+| outro = 
+| format = template
+| template = Meeting Minutes Block info for table row highlighted
+| searchlabel = 
+}}&lt;!--
+
+         Meetings before today (past)
+
+--&gt;{{#ask: [[Category:Meeting Minutes]] [[Meeting date::&gt; {{#time: d F Y | -7 days}} ]] [[Meeting date::&lt;&lt; {{#time: d F Y }} ]]
+| ?Meeting type = Type
+| ?Meeting date = Date
+| sort = Meeting date, Start time
+| order = desc
+| limit = 30
+| link = none
+| default = 
+| intro = 
+| outro = 
+| format = template
+| template = Meeting Minutes Block info for table row
+| searchlabel = 
+}}&lt;tr&gt;&lt;td style=&quot;width:100%;margin:5px 0px 0px 0px;&quot;&gt;[[Meeting Minutes |... more meeting minutes]]&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+      <sha1>erjtn7tb759gqxso5mbuffae5oo3b6o</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Meeting Minutes Block info for table row</title>
+    <ns>10</ns>
+    <id>10446</id>
+    <revision>
+      <id>52668</id>
+      <parentid>48201</parentid>
+      <timestamp>2014-11-26T16:15:56Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="684">&lt;noinclude&gt;
+&lt;pre&gt;
+{{{1|}}} = Meeting page title (i.e. {{PAGENAME}} for meeting)
+{{{2|}}} = Meeting type (Tools Panel, FIAR Call, etc...not full name of page like &quot;EVA Tools Panel - 23 August 2012&quot;)
+{{{3|}}} = Meeting date
+&lt;/pre&gt;
+&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;&lt;td&gt;&lt;table class=&quot;main-page-meeting-minutes-row&quot; style=&quot;width:100%;padding:5px;border:1px solid #cccccc;margin:10px 0px 0px 0px;&quot;&gt;&lt;tr&gt;&lt;th&gt;'''[[{{{1|}}}|{{{2|}}}]]''' ({{{3|}}})&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;{{#ask: [[Has topic title::+]][[From page::{{{1|}}}]]
+|mainlabel=-
+|? Has topic title
+|? Synopsis
+|? From page
+|link=none
+|format = template
+|template = Meeting topic and synopsis bullet
+}}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/includeonly&gt;</text>
+      <sha1>8rd1o4o025sxmqjxiwd6fjxz8b0m5hq</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Meeting Minutes Block info for table row highlighted</title>
+    <ns>10</ns>
+    <id>10447</id>
+    <revision>
+      <id>52669</id>
+      <parentid>48202</parentid>
+      <timestamp>2014-11-26T16:17:29Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <comment>new Ext:MM</comment>
+      <text xml:space="preserve" bytes="710">&lt;noinclude&gt;
+&lt;pre&gt;
+{{{1|}}} = Meeting page title (i.e. {{PAGENAME}} for meeting)
+{{{2|}}} = Meeting type (Tools Panel, FIAR Call, etc...not full name of page like &quot;EVA Tools Panel - 23 August 2012&quot;)
+{{{3|}}} = Meeting date
+&lt;/pre&gt;
+&lt;/noinclude&gt;&lt;includeonly&gt;&lt;tr&gt;&lt;td&gt;&lt;table class=&quot;main-page-meeting-minutes-row highlighted-row-light-yellow&quot; style=&quot;width:100%;padding:5px;border:1px solid #cccccc;margin:10px 0px 0px 0px;&quot;&gt;&lt;tr&gt;&lt;th&gt;'''[[{{{1|}}}|{{{2|}}}]]''' (Today)&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;{{#ask: [[Has topic title::+]][[From page::{{{1|}}}]]
+|mainlabel=-
+|? Has topic title
+|? Synopsis
+|? From page
+|link=none
+|format = template
+|template = Meeting topic and synopsis bullet
+}}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/includeonly&gt;</text>
+      <sha1>pvlkuw065w8rd995tfceupybrrootji</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Meeting</title>
+    <ns>10</ns>
+    <id>1132</id>
+    <revision>
+      <id>52675</id>
+      <parentid>52671</parentid>
+      <timestamp>2014-11-26T16:38:48Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <comment>new Ext:MM</comment>
+      <text xml:space="preserve" bytes="3140">&lt;includeonly&gt;&lt;!--
+# Template:Meeting
+#   (1) Setup JS/CSS and category
+#   (2) Add category
+#   (3) Create wrapper div around infobox and table of contents
+#   (4) Create infobox
+#   (5) Close out wrapper div
+#   (6) Show overview of meeting
+#   (7) #ask query for recent meetings
+#   (8) Show link to form
+#   (9) Template documentation (noinclude)
+
+
+
+#
+# (1) Call the #meetingminutestemplate parser function in order to add
+#     the required javascript and CSS to the meeting template (uses same
+#     parser function as Template:Meeting minutes.
+#
+--&gt;{{#meetingminutestemplate:}}&lt;!--
+
+
+#
+# (2) Add Category:Meeting Minutes.
+#
+--&gt;[[Category:Meeting]]&lt;!--
+
+
+#
+# (3) Add wrapper &lt;div&gt; which will go around infobox and table of contents.
+#     This allows the infobox and TOC to both be positioned on the left and
+#     be approximately the same size. FIXME: make them exactly the same size
+#
+--&gt;&lt;div id=&quot;ext-meeting-minutes-toc-wrapper&quot;&gt;&lt;!--
+
+
+#
+# (4) Create infobox
+#
+--&gt;
+{| class=&quot;meeting-minutes-infobox&quot;
+! style=&quot;text-align: center; background-color:#ccccff;&quot; colspan=&quot;2&quot; |&lt;big&gt;{{PAGENAME}}&lt;/big&gt;
+|-
+! Standard day
+| {{#if: {{{Standard day|}}} | [[Standard day::{{{Standard day|}}}]] | }}
+|-
+! Standard time
+| {{#if: {{{Standard time|}}} | [[Standard time::{{{Standard time|}}}]] | }}
+|-
+! Building
+| {{#if: {{{Building|}}} | [[Building::{{{Building|}}}]] | }}
+|-
+! Room
+| {{#if: {{{Room|}}} | [[Room::{{{Room|}}}]] | }}
+|-
+! Call-in number
+| {{#if: {{{Call-in number|}}} | [[Call in number::{{{Call-in number|}}}]] | }}
+|-
+! Call-in password
+| {{#if: {{{Call-in password|}}} | [[Call in password::{{{Call-in password|}}}]] | }}
+|-
+! Standard DX3 representative(s)
+| {{#arraymap:{{{Standard DX3 representative(s)|}}}|,|x|[[Standard DX3 rep::x]]}}
+|-
+! Managed by cadre(s)
+| {{#arraymap:{{{Managed by cadre(s)|}}}|,|x|[[Managed by cadre::x]]}}
+|-
+! Notable attendee(s)
+| {{#arraymap:{{{Notable attendee(s)|}}}|,|x|[[Notable attendee::x]]}}
+|}
+&lt;!--
+
+#
+# Note: no TOC in Template:Meeting at this time. could add __TOC__ here if desired.
+#
+
+
+
+#
+# (5) Close out &lt;div&gt; wrapper around infobox and TOC
+#
+--&gt;&lt;/div&gt;&lt;!--
+
+
+
+#
+# (6) Show overview of meeting
+#
+--&gt;{{#if: {{{Overview|}}} | {{{Overview}}}{{#set: Overview ={{{Overview}}} }} | &lt;!-- else do nothing --&gt; }}&lt;!--
+
+
+#
+# (7) Perform #ask query to show recent meetings
+#
+--&gt;&lt;h2&gt;Recent Meetings&lt;/h2&gt;
+{{#ask: [[Category:Meeting Minutes]] [[Meeting type::{{PAGENAME}}]]
+| ?Meeting date = Date
+| ?Notes taken by
+| sort = Meeting date
+| order = desc
+| limit = 10
+| default = No meetings of this type have been added
+}}
+
+&lt;!-- leave blank lines above
+
+
+#
+# (8) Add link to meeting minutes form
+#
+--&gt;[[Special:FormEdit/Meeting Minutes|Add Meeting Minutes]]&lt;!--
+
+
+
+#
+# (9) Template definition complete. Template documentation below (within noinclude).
+#
+--&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+This is the &quot;Meeting&quot; template.
+It should be called in the following format:
+&lt;pre&gt;
+{{Meeting
+|Standard day=
+|Standard time=
+|Building=
+|Room=
+|Call-in number=
+|Call-in password=
+|Standard DX3 representative(s)=
+|Managed by cadre(s)=
+|Notable attendee(s)=
+}}
+&lt;/pre&gt;
+Edit the page to see the template text.
+&lt;/noinclude&gt;</text>
+      <sha1>nul5i6v6sdpfa4x5ip8oytjyjoow2nb</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Meeting minutes</title>
+    <ns>10</ns>
+    <id>1583</id>
+    <revision>
+      <id>52674</id>
+      <parentid>52673</parentid>
+      <timestamp>2014-11-26T16:29:13Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="2431">&lt;includeonly&gt;&lt;!--
+#
+# Template:Meeting minutes
+#   (1) Setup JS/CSS and category
+#   (2) Add category
+#   (3) Create wrapper div around infobox and table of contents
+#   (4) Create infobox
+#   (5) Specify Table of Contents
+#   (6) Close out wrapper div
+#   (7) Insert topics (using Template:Topic from Meeting)
+#   (8) Template documentation (noinclude)
+
+
+
+#
+# (1) Call the #meetingminutestemplate parser function in order to add
+#     the required javascript and CSS to the meeting minutes template.
+#
+--&gt;{{#meetingminutestemplate:}}&lt;!--
+
+
+#
+# (2) Add Category:Meeting Minutes.
+#
+--&gt;[[Category:Meeting Minutes]]&lt;!--
+
+
+
+#
+# (3) Add wrapper &lt;div&gt; which will go around infobox and table of contents.
+#     This allows the infobox and TOC to both be positioned on the left and
+#     be approximately the same size. FIXME: make them exactly the same size
+#
+--&gt;&lt;div id=&quot;ext-meeting-minutes-toc-wrapper&quot;&gt;&lt;!--
+
+
+#
+# (4) Create the infobox
+#
+--&gt;
+{| class=&quot;meeting-minutes-infobox&quot;
+! style=&quot;text-align: center; background-color:#ccccff;&quot; colspan=&quot;2&quot; |&lt;big&gt;Meeting Minutes&lt;/big&gt;
+|-
+! Meeting type
+| [[Meeting type::{{{Meeting type|}}}]]
+|-
+! Meeting date
+| [[Meeting date::{{{Meeting date|}}}]] {{#vardefine:meetingDate|{{{Meeting date|}}} }}
+|-
+! Start time
+| [[Start time::{{{Start time hour|}}}:{{{Start time minute|}}}]]
+|-
+! Notes taken by
+| {{#arraymap:{{{Notes taken by|}}}|,|x|[[Notes taken by::x]]}}
+|-
+! style=&quot;text-align: center; background-color:#ccccff;&quot; colspan=&quot;2&quot; |&lt;big&gt;Meeting Documents&lt;/big&gt;
+|-
+| colspan=&quot;2&quot; | {{#if: {{{Meeting files|}}} | {{{Meeting files|}}} | No documents }}
+|}
+&lt;!--
+
+
+
+#
+# (5) Specify the location of the Table of Contents
+#
+--&gt;__TOC__
+
+&lt;!-- leave some blank lines above
+
+
+
+#
+# (6) Close out &lt;div&gt; wrapper around infobox and TOC
+#
+--&gt;&lt;/div&gt;&lt;!--
+
+
+#
+# (7) Insert all of the meeting topics. Note: these topics are handled by
+#     Template:Topic from Meeting
+#
+--&gt;{{{Topics|}}}&lt;!--
+
+
+#
+# (8) Template definition complete. Template documentation below (within noinclude).
+#
+--&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+This is the &quot;Meeting minutes&quot; template. It should be generated using [[Form:Meeting Minutes]].
+
+If edited manually, it should be called in the following format:
+&lt;pre&gt;
+{{Meeting minutes
+|Meeting type=
+|Meeting date=
+|Start time hour=
+|Start time minute=
+|Notes taken by=
+|Topics= &lt;insert instances of [[Template:Topic from Meeting]] here&gt;
+}}
+&lt;/pre&gt;
+
+Edit the page to see the template text.
+&lt;/noinclude&gt;</text>
+      <sha1>chx9ygq46mflpuby9es2w6fxcybfo5a</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Topic from meeting</title>
+    <ns>10</ns>
+    <id>1582</id>
+    <revision>
+      <id>52662</id>
+      <parentid>47664</parentid>
+      <timestamp>2014-11-26T15:56:35Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <comment>new version of Ext:MM</comment>
+      <text xml:space="preserve" bytes="984">&lt;includeonly&gt;&lt;!--
+
+
+#
+# (1) Create subobject of meeting topic data
+#
+--&gt;{{#subobject:
+|From page={{FULLPAGENAME}}
+|Has date={{#var:meetingDate}}
+|Has topic title={{{Has topic title|}}}
+|Synopsis={{#synopsize: {{{Full text|}}} | 500 | 1 }}
+|Related article={{{Related article|}}}|+sep=,
+}}&lt;!--
+
+
+#
+# Display topic info: header, related articles, and full text
+#
+--&gt;&lt;h2&gt;{{{Has topic title|}}}&lt;/h2&gt;
+&lt;small&gt;'''Related Article(s):''' {{#arraymap:{{{Related article|}}}|,|x|[[x]]}}&lt;/small&gt;
+
+{{{Full text|}}}
+
+
+&lt;!-- leave space after full text
+
+
+
+#
+# (3) Template definition complete. Show template documentation. 
+#
+--&gt;&lt;/includeonly&gt;&lt;noinclude&gt;
+This is the &quot;Topic from meeting&quot; template. It should be created using the [[Form:Meeting Minutes]].
+
+If edited manually, it should be called in the following format:
+&lt;pre&gt;
+{{Topic from meeting
+|From page=
+|Has date=
+|Full text=
+|Related article(s)=
+|Uploaded files=
+|External links=
+}}
+&lt;/pre&gt;
+Edit the page to see the template text.
+&lt;/noinclude&gt;</text>
+      <sha1>syx8c6wrndmkw6g2hecz9avp3ydmcy6</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Form:Meeting</title>
+    <ns>106</ns>
+    <id>1142</id>
+    <revision>
+      <id>27738</id>
+      <parentid>27720</parentid>
+      <timestamp>2013-10-30T16:27:23Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="1362">&lt;noinclude&gt;
+This is the &quot;Meeting&quot; form.
+To create a page with this form, enter the page name below;
+if a page with that name already exists, you will be sent to a form to edit that page.
+
+
+{{#forminput:form=Meeting}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;{{{info|page name=&lt;Meeting[Meeting title]&gt;}}}
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|Meeting}}}
+{| class=&quot;formtable&quot;
+! Meeting Title:
+| {{{field|Meeting title|mandatory}}}
+|-
+! Standard day:
+| {{{field|Standard day}}}
+|-
+! Standard time:
+| {{{field|Standard time}}}
+|-
+! Building:
+| {{{field|Building}}}
+|-
+! Room:
+| {{{field|Room}}}
+|-
+! Call-in number:
+| {{{field|Call-in number}}}
+|-
+! Call-in password:
+| {{{field|Call-in password}}}
+|-
+! Standard DX3 representative(s):
+| {{{field|Standard DX3 representative(s)}}}
+|-
+! Managed by cadre(s):
+| {{{field|Managed by cadre(s)}}}
+|-
+! Notable attendee(s):
+| {{{field|Notable attendee(s)}}}
+|}
+'''Overview:''' {{{field|Overview|autogrow|input type=textarea}}}
+{{{end template}}}
+
+'''Free text:'''
+
+{{{standard input|free text|autogrow|rows=10}}}
+
+
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;</text>
+      <sha1>hbxoiliwrzjh8eiyvu53kntam2ndy58</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Form:Meeting Minutes</title>
+    <ns>106</ns>
+    <id>1584</id>
+    <revision>
+      <id>52663</id>
+      <parentid>47728</parentid>
+      <timestamp>2014-11-26T16:03:16Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <comment>new version of Ext:MM</comment>
+      <text xml:space="preserve" bytes="4993">&lt;includeonly&gt;{{#meetingminutesform:}}__NOTOC__{{{info|page name=&lt;Meeting minutes[Meeting type]&gt; - &lt;Meeting minutes[Meeting date]&gt;}}}
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|Meeting minutes}}}&lt;!--
+
+
+Main Form Definition
+
+--&gt;
+&lt;div class=&quot;meeting-minutes-save-often&quot;&gt;
+&lt;h3&gt;Remember...&lt;/h3&gt;
+'''[[Help:Save Often|Save often]]''' or '''[[Help:Text Editor|use a text editor]]'''. Revisions are free. Also, if there is ''anything'' you don't know how to do, see the '''[[Help:Meeting Minutes|help page]]''' for more info.
+&lt;/div&gt;
+
+&lt;h2&gt;Meeting Details&lt;/h2&gt;
+&lt;div class=&quot;meeting-minutes-edit-section multipleTemplateInstance&quot;&gt;
+{| class=&quot;formtable meeting-minutes-formtable&quot;
+! Meeting name
+| {{{field|Meeting type|input type=combobox|values from category=Meeting|mandatory}}}
+|-
+! Meeting date
+| {{{field|Meeting date|mandatory}}}
+|-
+! Start time
+| {{{field|Start time hour|maxlength=2|size=2|mandatory}}} : {{{field|Start time minute|maxlength=2|size=2|mandatory}}} (24-hour time, please)
+|-
+! Notes taken by
+| {{{field|Notes taken by|values from category=Person|mandatory|class=meeting-minutes-author-field}}}
+|}
+&lt;/div&gt;
+
+&lt;h2&gt;Meeting Files&lt;/h2&gt;
+{{{field|Meeting files|holds template}}}&lt;!-- 
+
+
+
+
+
+
+--&gt;&lt;h1 style=&quot;margin-top:30px;&quot;&gt;Meeting Topics&lt;/h1&gt;
+
+{{{field|Topics|holds template}}}
+
+{{{end template}}}&lt;!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{Meeting Minutes/Form Help/Topic Title}}
+{{Meeting Minutes/Form Help/Topic Synopsis}}
+{{Meeting Minutes/Form Help/Topic Related Articles}}
+{{{field|Synopsis|input type=textarea|autogrow|maxlength=255|class=full-width no-links-allowed character-limit-255|placeholder=Synopsis}}}
+{{Meeting Minutes/Form Help/Topic Full Text}}
+
+    Topics
+
+--&gt;{{{for template|Topic from meeting|multiple|embed in field=Meeting minutes[Topics]|add button text=Add Topic}}}&lt;div class=&quot;instance-wrapper&quot;&gt;
+{{{field|Has topic title|class=full-width no-links-allowed title-input-field|placeholder=Topic Title}}}
+
+{{{field|Related article|list|class=full-width no-links-allowed|values from namespace=Main|placeholder=Related articles}}}
+
+{{{field|Full text|input type=textarea|autogrow|class=full-width shrink-on-blur emphasize meeting-topic-full-text|cols=75}}}
+&lt;/div&gt;{{{end template}}}&lt;!--
+
+
+
+    Meeting Files (uploads and external files)
+
+--&gt;{{{for template|Meeting Minutes/Files|multiple|embed in field=Meeting minutes[Meeting files]|add button text=Add File}}}
+&lt;div class=&quot;mti-help-box mti-hide-on-blur&quot;&gt;
+Local files must be uploaded first. See [[Help:Meeting Minutes|the help page]] for more info.
+&lt;/div&gt;
+{| class=&quot;formtable meeting-minutes-formtable&quot;
+! Local File Name or URL
+| {{{field|File or URL|class=full-width no-links-allowed|placeholder=Enter filename starting with File: or URL starting with http}}}
+|-
+! Alternate name
+| {{{field|Alternate name|class=full-width no-links-allowed}}}
+|}
+{{{end template}}}&lt;!--
+
+--&gt;
+== Free text ==
+
+&lt;div class=&quot;montalvo-collapsible mw-collapsed&quot; data-collapsetext=&quot;Hide Free Text&quot; data-expandtext=&quot;Show Free Text Entry&quot;&gt;
+  &lt;div class=&quot;mw-collapsible-content&quot;&gt;
+* '''Use this field ''very'' sparingly'''
+* Nothing in this field will be distributed to related pages
+* Info in this field will be added to the end of the meeting minutes page
+{{{standard input|free text|rows=10}}}
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+== Save Page ==
+&lt;div class=&quot;montalvo-collapsible mw-collapsed&quot; data-collapsetext=&quot;Hide Help&quot; data-expandtext=&quot;Show Help&quot;&gt;
+  &lt;div class=&quot;mw-collapsible-content&quot;&gt;
+* '''Summary:''' Not required, but recommended if making a revision to a page. The summary will be included emails sent to people watching this page.
+* '''Minor edit checkbox:''' Not required
+* '''Watch this page checkbox:''' Check this box. If you are editing this page, in all likelihood you care about the content. Watch the page to have greater visibility into future changes. You can make it so the box is automatically checked by editing your preferences (top right of the screen). For more info see [[Help:Watching Pages]].
+* '''Save page:''' Click this when you're done to save the page.
+* '''Show preview:''' Click this to see what your wiki-markup will look like when formatted. Very handy for learning how to use the wiki.
+* '''Show changes:''' Shows all changes you've made, compared to the previous revision (doesn't do much when creating a brand new page).
+* '''Cancel:''' Don't click this unless you want to lose what you've been working on.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;&lt;!--
+
+
+
+  Below is content only shown on the Form:Meeting Minutes page
+
+--&gt;&lt;noinclude&gt;
+This is the &quot;Meeting Minutes&quot; form. Click edit to make changes to the structure of the form itself. Or [[Special:FormEdit/Meeting_Minutes|create new meeting minutes]].&lt;!--{{#forminput:form=Meeting Minutes}}--&gt;&lt;/noinclude&gt;</text>
+      <sha1>mdftyge053vaa6thqiu4x8vnuqhbsiy</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Meeting</title>
+    <ns>14</ns>
+    <id>1143</id>
+    <revision>
+      <id>3394</id>
+      <timestamp>2012-05-23T14:16:05Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="58">This category uses the form [[Has default form::Meeting]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Meeting Minutes</title>
+    <ns>14</ns>
+    <id>1152</id>
+    <revision>
+      <id>3404</id>
+      <timestamp>2012-05-23T14:18:21Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="66">This category uses the form [[Has default form::Meeting Minutes]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Call in number</title>
+    <ns>102</ns>
+    <id>1137</id>
+    <revision>
+      <id>3388</id>
+      <timestamp>2012-05-23T14:15:05Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Call in password</title>
+    <ns>102</ns>
+    <id>1138</id>
+    <revision>
+      <id>3389</id>
+      <timestamp>2012-05-23T14:15:08Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Managed by cadre</title>
+    <ns>102</ns>
+    <id>1140</id>
+    <revision>
+      <id>3391</id>
+      <timestamp>2012-05-23T14:15:18Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="46">This is a property of type [[Has type::Page]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Standard day</title>
+    <ns>102</ns>
+    <id>1133</id>
+    <revision>
+      <id>3384</id>
+      <timestamp>2012-05-23T14:14:38Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="288">This is a property of type [[Has type::String]].
+
+The allowed values for this property are:
+* [[Allows value::Monday]]
+* [[Allows value::Tuesday]]
+* [[Allows value::Wednesday]]
+* [[Allows value::Thursday]]
+* [[Allows value::Friday]]
+* [[Allows value::Saturday]]
+* [[Allows value::Sunday]]</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Standard time</title>
+    <ns>102</ns>
+    <id>1134</id>
+    <revision>
+      <id>3385</id>
+      <timestamp>2012-05-23T14:14:39Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Meeting date</title>
+    <ns>102</ns>
+    <id>1145</id>
+    <revision>
+      <id>3396</id>
+      <timestamp>2012-05-23T14:16:29Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="46">This is a property of type [[Has type::Date]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Meeting type</title>
+    <ns>102</ns>
+    <id>1144</id>
+    <revision>
+      <id>3406</id>
+      <parentid>3395</parentid>
+      <timestamp>2012-05-23T14:22:02Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="113">This is a property of type [[Has type::Page]]. It links to pages that use the form [[Has default form::Meeting]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Notes taken by</title>
+    <ns>102</ns>
+    <id>1147</id>
+    <revision>
+      <id>3407</id>
+      <parentid>3399</parentid>
+      <timestamp>2012-05-23T14:23:41Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="112">This is a property of type [[Has type::Page]]. It links to pages that use the form [[Has default form::Person]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Start time</title>
+    <ns>102</ns>
+    <id>1146</id>
+    <revision>
+      <id>3398</id>
+      <timestamp>2012-05-23T14:16:47Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:From page</title>
+    <ns>102</ns>
+    <id>1289</id>
+    <revision>
+      <id>3686</id>
+      <timestamp>2012-05-25T17:54:05Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created page with &quot;This is a property of type [[Has type::Page]]. It is used by calls to the [http://www.mediawiki.org/wiki/Extension:Semantic_Internal_Objects Semantic Internal Objects] parser fun...&quot;</comment>
+      <text xml:space="preserve" bytes="381">This is a property of type [[Has type::Page]]. It is used by calls to the [http://www.mediawiki.org/wiki/Extension:Semantic_Internal_Objects Semantic Internal Objects] parser function #set_internal to point back to the page on which the #set_internal call was made. There may be a built-in method to do this, but it is not as clear as explicitly calling out a &quot;From page&quot; property.</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Has date</title>
+    <ns>102</ns>
+    <id>1576</id>
+    <revision>
+      <id>4713</id>
+      <parentid>4708</parentid>
+      <timestamp>2012-06-11T23:55:51Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="317">This property is of type [[Has type::Date]]. It is used by the [http://www.mediawiki.org/wiki/Extension:Semantic_Internal_Objects Semantic Internal Object] defined by [[Template:Subject significant to subject]]. It is also used by [[Template:Crew involved with subject]] and [[Template:Person involved with subject]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Has topic title</title>
+    <ns>102</ns>
+    <id>1586</id>
+    <revision>
+      <id>4734</id>
+      <timestamp>2012-06-12T16:47:38Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created page with &quot;This is a property of type [[Has type::String]].&quot;</comment>
+      <text xml:space="preserve" bytes="48">This is a property of type [[Has type::String]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Index</title>
+    <ns>102</ns>
+    <id>4017</id>
+    <revision>
+      <id>14718</id>
+      <timestamp>2013-02-19T13:11:27Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created page with &quot;This property has type [[Has type::Number]] and is intended to be used to state the intended order of a Multiple Instance Template.&quot;</comment>
+      <text xml:space="preserve" bytes="131">This property has type [[Has type::Number]] and is intended to be used to state the intended order of a Multiple Instance Template.</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Related article</title>
+    <ns>102</ns>
+    <id>1155</id>
+    <revision>
+      <id>3413</id>
+      <timestamp>2012-05-23T14:46:16Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created page with &quot;This is a property of type [[Has type::Page]].&quot;</comment>
+      <text xml:space="preserve" bytes="46">This is a property of type [[Has type::Page]].</text>
+      <sha1/>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Property:Synopsis</title>
+    <ns>102</ns>
+    <id>1156</id>
+    <revision>
+      <id>48147</id>
+      <parentid>3414</parentid>
+      <timestamp>2014-06-30T23:08:52Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="46">This is a property of type [[Has type::Text]].</text>
+      <sha1>e9l4lxsaidmyd6062gydncspht400ia</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+</mediawiki>

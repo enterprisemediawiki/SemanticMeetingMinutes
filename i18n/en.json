@@ -1,0 +1,17 @@
+{
+	"meetingminutes-desc": "Provides a simple method to enter meeting minutes into MediaWiki using Semantic Forms and embed minutes into related pages",
+	"synopsize": "Synopsize",
+	"synopsize-parameter-synopsis": "This is the synopsis and stuff. FIXME.",
+	"synopsize-parameter-second": "FIXME",
+	"synopsize-test": "{{#ask: [[Category:Meeting Minutes]] [[Meeting type::EVA Tools Panel]] | ?Meeting date = Date | ?Notes taken by | sort = Meeting date | order = desc | limit = 10 | default = No meetings of this type have been added }}",
+
+	"meetingminutes-property-meeting-title": "Meeting title",
+	"meetingminutes-property-standard-day": "Meeting standard day",
+	"meetingminutes-property-standard-time": "Meeting standard time",
+	"meetingminutes-property-location": "Meeting location",
+	"meetingminutes-property-room-number": "Meeting room number",
+	"meetingminutes-property-phone-number": "Meeting phone number",
+	"meetingminutes-property-phone-password": "Meeting phone password",
+	"meetingminutes-property-overview": "Meeting overview",
+	"meetingminutes-property-attendee": "Meeting attendee"
+}

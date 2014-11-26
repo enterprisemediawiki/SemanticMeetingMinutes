@@ -1,0 +1,42 @@
+#ext-meeting-minutes-toc-wrapper {
+	clear: both;
+	margin-bottom: .5em;
+	float: right;
+	margin-left:2.5em;
+	width: 300px;
+}
+
+#toc { 
+    float: right !important;
+	width: 100% !important;
+}
+
+.meeting-minutes-infobox {
+	width:            100%;
+	border:           solid #AAA 1px;
+	background-color: #f9f9f9;
+	color:            black;
+	float:            right;
+	clear:            right;
+	text-align:       left;
+	line-height:      1.5em;
+	font-size:        88%;
+	margin:           0.5em 0 0.5em 1em;
+}
+
+.meeting-minutes-infobox caption {
+	font-size: 125%;
+	font-weight: bold;
+}
+
+.meeting-minutes-infobox-row-label {
+	text-align: left;
+}
+
+/*
+Meeting minutes infobox:
+
+style="width: 30em; font-size: 90%; border: 1px solid #aaaaaa; background-color: #f9f9f9; color: black; margin-bottom: 0.5em; margin-left: 1em; padding: 0.2em; float: right; clear: right; text-align:left;"
+
+
+*/

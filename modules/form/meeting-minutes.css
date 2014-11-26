@@ -1,0 +1,114 @@
+.title-input-field {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.multipleTemplateInstance {
+  background-color: #eee !important;
+  border: solid transparent 1px !important;
+  border-left: solid transparent 3px !important;
+}
+.multipleTemplateInstance:hover {
+/*   border: solid #aaa 1px !important; */
+	border-left: solid #00634E 3px !important;
+}
+
+.focus-multipleTemplateInstance {
+/*   border: solid blue 2px !important; */
+/*   background-color: rgb(224, 182, 118) !important; */
+	background-color: #00AF89 !important;
+}
+
+.instance-wrapper {
+	padding:0 10px;
+}
+
+.meeting-minutes-save-often {
+	background-color: #eee;
+	border-left: solid #D11D13 3px;
+	margin: 20px 0;
+	padding: 20px;
+}
+.meeting-minutes-save-often h3 {
+	color: #D11D13;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.meeting-minutes-edit-section {
+	background-color: #eee;
+/* 	border-left: solid #347BFF 3px; */
+	margin: 0 0 20px 0;
+	padding: 20px;
+	border-left: solid transparent 3px !important;	
+}
+.meeting-minutes-edit-section h3 {
+/* 	color: #347BFF; */
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+.meeting-minutes-edit-section:hover {
+/*   border: solid #aaa 1px !important; */
+	border-left: solid #00634E 3px !important;
+}
+
+
+
+.meeting-minutes-author-field {
+	width: 300px;
+}
+
+
+.meeting-minutes-formtable th:first-child {
+	width:140px;
+}
+
+.synopsis-wrapper {
+	background-color: #ccc;
+	margin: 5px 0 10px 0;
+	padding: 5px;
+	font-style: italic;
+}
+
+.multipleTemplateAdder {
+	color: #fff;
+	border: 1px solid transparent;
+/* 	background-color: #428bca;
+	border-color: #357ebd; */
+	background-color: #347BFF;
+	border-color: #347BFF;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.33;
+	border-radius: 6px;
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.multipleTemplateAdder:hover {
+	color: #fff;
+/* 	background-color: #3276b1;
+	border-color: #285e8e; */
+	background-color: #2456B3;
+	border-color: #347BFF;
+}
+.mti-hide-on-blur {
+	display: none;
+}
+.mti-help-box {
+	padding: 5px 10px;
+	border-radius: 4px;
+	margin: 10px 3px;
+	border: 1px solid #FFB50D;
+	background-color: #fcf8e3;
+}
