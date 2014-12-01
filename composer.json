@@ -21,8 +21,8 @@
 	},
 	"require": {
 		"php": ">=5.3.0",
-		"mediawiki/numer-alpha": "*",
-		"mediawiki/header-footer": "*"
+		"mediawiki/numer-alpha": "0.*",
+		"mediawiki/header-footer": "2.2.*"
 	},
 	"autoload": {
 		"files" : [
