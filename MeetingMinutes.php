@@ -19,13 +19,13 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 	die( 'MeetingMinutes extension' );
 }
 
-$GLOBALS['wgExtensionCredits']['parserhook'][] = array(
+$GLOBALS['wgExtensionCredits']['semantic'][] = array(
 	'path'           => __FILE__,
-	'name'           => 'MeetingMinutes',
-	'url'            => 'http://github.com/enterprisemediawiki/MeetingMinutes',
+	'name'           => 'Semantic Meeting Minutes',
+	'url'            => 'http://github.com/enterprisemediawiki/SemanticMeetingMinutes',
 	'author'         => 'James Montalvo',
 	'descriptionmsg' => 'meetingminutes-desc',
-	'version'        => '0.2.0'
+	'version'        => '0.1.0'
 );
 
 $GLOBALS['wgMessagesDirs']['MeetingMinutes'] = __DIR__ . '/i18n';
