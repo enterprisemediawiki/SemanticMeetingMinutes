@@ -4,10 +4,11 @@
 	"description": "Method of entering meeting minutes into MediaWiki using Semantic Forms and displaying minutes on related pages",
 	"keywords": [
 		"MediaWiki",
+		"Enterprise",
 		"SMW",
 		"Semantic MediaWiki"
 	],
-	"homepage": "https://github.com/EnterpriseMW/MeetingMinutes",
+	"homepage": "https://github.com/EnterpriseMediaWiki/SemanticMeetingMinutes",
 	"license": "GPL-2.0+",
 	"authors": [
 		{
@@ -27,7 +28,7 @@
 	},
 	"autoload": {
 		"files" : [
-			"MeetingMinutes.php"
+			"SemanticMeetingMinutes.php"
 		]
 	}
 }

@@ -3,9 +3,9 @@
  * The MeetingMinutes extension provides JS and CSS to enable recording meeting
  * minutes in SMW. See README.md.
  * 
- * Documentation: https://github.com/enterprisemediawiki/MeetingMinutes
- * Support:       https://github.com/enterprisemediawiki/MeetingMinutes
- * Source code:   https://github.com/enterprisemediawiki/MeetingMinutes
+ * Documentation: https://github.com/enterprisemediawiki/SemanticMeetingMinutes
+ * Support:       https://github.com/enterprisemediawiki/SemanticMeetingMinutes
+ * Source code:   https://github.com/enterprisemediawiki/SemanticMeetingMinutes
  *
  * @file MeetingMinutes.php
  * @addtogroup Extensions
