@@ -34,7 +34,7 @@ SMM comes with many pre-built forms, templates, categories and properties. To cr
 
 It is possible that the SMM pages you imported in step 3 could have overwritten existing pages with the same names. Go to your Recent Changes page and review the changes that were made.
 	
-### Step 4: Optional steps
+### Step 5: Optional steps
 
 It is highly recommended that you make two further changes to get the most out of Semantic Meeting Minutes.
 
