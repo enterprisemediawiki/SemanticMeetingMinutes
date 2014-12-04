@@ -1,5 +1,5 @@
-MeetingMinutes
-==============
+Semantic Meeting Minutes
+========================
 
 This extension provides Javascript and CSS helpers to enable a slick method of entering meeting minutes into MediaWiki using Semantic Forms.
 
