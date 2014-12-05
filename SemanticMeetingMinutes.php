@@ -44,6 +44,12 @@ $ExtensionMeetingMinutesResourceTemplate = array(
 	'remoteExtPath' => 'MeetingMinutes/modules',
 );
 
+// check pcre.backtrack_limit to be large enough; set to 10 million if not
+if ( ini_get( 'pcre.backtrack_limit' ) < 10000000 ) {
+	ini_set( 'pcre.backtrack_limit', 10000000 );
+}
+
+
 $GLOBALS['wgResourceModules'] += array(
 
 	'ext.meetingminutes.form' => $ExtensionMeetingMinutesResourceTemplate + array(

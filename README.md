@@ -26,9 +26,10 @@ Ideally all extensions would support Composer, but at this time not all do. You 
 
 ### Step 3: Import forms, templates, categories and properties
 
-SMM comes with many pre-built forms, templates, categories and properties. To create these on your wiki, use the importDump.php script from your wiki's install directory:
+SMM comes with many pre-built forms, templates, categories and properties. To create these on your wiki, use the importDump.php script from your wiki's install directory. After importing the pages make sure to rebuild your recent changes.
 
-    php maintenance/importDump.php --conf LocalSettings.php /extensions/SemanticMeetingMinutes/ImportFiles/import.xml
+    php maintenance/importDump.php < ./extensions/SemanticMeetingMinutes/ImportFiles/import.xml
+    php maintenance/rebuildrecentchanges.php
 
 ### Step 4: Verify imported pages did not overwrite existing ones
 
