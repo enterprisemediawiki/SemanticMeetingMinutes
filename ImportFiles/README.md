@@ -13,6 +13,8 @@ Template:Meeting Minutes Block
 Template:Meeting Minutes Block info for table row
 Template:Meeting Minutes Block info for table row highlighted
 Template:Meeting references row
+Template:File link
+Template:Meeting Minutes/Files
 Form:Meeting
 Form:Meeting Minutes
 Category:Meeting

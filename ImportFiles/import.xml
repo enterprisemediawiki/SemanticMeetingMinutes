@@ -533,6 +533,93 @@ Edit the page to see the template text.
     </revision>
   </page>
   <page>
+    <title>Template:File link</title>
+    <ns>10</ns>
+    <id>40</id>
+    <revision>
+      <id>57</id>
+      <parentid>56</parentid>
+      <timestamp>2014-12-09T18:24:23Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="2636">&lt;noinclude&gt;'''Template:File link''' is an alternate method of linking to files in this wiki. It allows all file linking, both to local wiki files and external files, to be performed with one method. See '''[[Help:Linking to files]]''' for a tutorial.
+
+== Local Files ==
+For local files use the format below. Note that the &quot;alt&quot; parameter is optional.
+&lt;pre&gt;
+{{File link | file=File:International Space Station.pdf | alt=ISS Presentation }} (note, this file has to exist for it to display properly)
+&lt;/pre&gt;
+
+The above wikitext displays as {{File link | file=File:International Space Station.pdf | alt=ISS Presentation }}. Note the &quot;file info&quot; link. There has been confusion with some wiki users who click on file links which bring them to another wiki page instead of directly to the file. Using this method, the major link will bring them directly to the file, whereas the &quot;file info&quot; link will bring them to the page where they can see the file upload history and upload new versions of the file.
+
+If the local file does not exist, the output will look like {{File link | file=File:My Fictitious File.doc | alt=Alt name won't show }} 
+
+== External Files ==
+For external files use the format below. Make sure to include &lt;nowiki&gt;http://&lt;/nowiki&gt; or &lt;nowiki&gt;https://&lt;/nowiki&gt; at the beginning of the URL. Again the &quot;alt&quot; parameter is optional, but it will look ugly without it in this case.
+&lt;pre&gt;
+{{File link | file=http://example.com/somefile.pdf | alt=My File }}
+&lt;/pre&gt;
+
+The above wikitext displays as {{File link | file=http://example.com/somefile.pdf | alt=My File }}. Note that there is no &quot;file info&quot; link, since the EVA Wiki has no such info for external files.
+
+&lt;/noinclude&gt;&lt;includeonly&gt;&lt;!-- 
+
+    #
+    #  DETERMINES if the filename is a local file or an external file
+    #    #pos returns 0 if &quot;File:&quot; is found at the beginning of the string
+    #    returns nothing if &quot;File:&quot; is not found in the string, or a number other than zero if found later in the string
+    #
+--&gt;{{#ifeq: 0 
+    | {{#pos:{{{file}}}|File:}} | &lt;!-- 
+ 
+
+    #
+    #  if filename starts with &quot;File:&quot;
+    #  
+--&gt;&lt;span style=&quot;white-space:nowrap;&quot;&gt;{{#ifexist:{{{file}}}&lt;!--
+
+        --&gt;|[[Media:{{#replace:{{{file}}}|File:}}|{{#if: {{{alt|}}} | {{{alt}}} | {{#replace:{{{file}}}|File:}} }}]]&lt;sup&gt; &lt;nowiki&gt;[&lt;/nowiki&gt;[[:{{{file}}}|file info]]&lt;nowiki&gt;]&lt;/nowiki&gt;&lt;/sup&gt;|&lt;!--
+
+        --&gt;[[{{{file}}}]]}}&lt;/span&gt;|&lt;!-- 
+
+
+    #
+    #  If does not start with &quot;File:&quot;
+    #  NOTE: the #if statement trims whitespace off of the URL...stupid hack
+    #  
+--&gt;[{{#if:{{{file|}}}|{{{file|}}} }} {{{alt|}}}]&lt;!--
+
+
+    #
+    #  Close out ifeq function
+    #
+--&gt;}}&lt;/includeonly&gt;</text>
+      <sha1>s1or1ey290ounjnmxqjz0b0q2kmne94</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Template:Meeting Minutes/Files</title>
+    <ns>10</ns>
+    <id>39</id>
+    <revision>
+      <id>55</id>
+      <timestamp>2014-12-09T17:31:40Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created page with &quot;* {{File link | file={{{File or URL|}}} | alt={{{Alternate name|}}} }}&lt;br /&gt;&quot;</comment>
+      <text xml:space="preserve" bytes="76">* {{File link | file={{{File or URL|}}} | alt={{{Alternate name|}}} }}&lt;br /&gt;</text>
+      <sha1>qldu4s71mefr0flysuf24yw648ikl8t</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
     <title>Form:Meeting</title>
     <ns>106</ns>
     <id>8</id>
