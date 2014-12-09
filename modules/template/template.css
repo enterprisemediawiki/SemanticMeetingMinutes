@@ -33,6 +33,11 @@
 	text-align: left;
 }
 
+/** Used to make form elements span full width of enclosing element **/
+.full-width {
+	width: 100% !important;
+}
+
 /*
 Meeting minutes infobox:
 
