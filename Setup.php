@@ -76,19 +76,21 @@ class Setup {
 	* @return bool true in all cases
 	*/
 	static function renderSynopsizeParserFunction ( &$parser, $frame, $args ) {
-
 		$args = self::processArgs( $frame, $args, array("", 255, 1) );
 			
 		$full_text  = $args[0];
 		$max_length = $args[1];
 		$max_lines  = $args[2];
-		
+
 		$needle = "\n";
+		$newline_pos = 0;
 		for($i=0; $i<$max_lines; $i++) {
-			if ($newline_pos)
+			if ( $newline_pos ) {
 				$offset = $newline_pos + strlen($needle);
-			else
+			}
+			else {
 				$offset = 0;
+			}
 			$newline_pos = strpos($full_text, $needle, $offset);
 		}
 
@@ -134,19 +136,7 @@ class Setup {
 	}
 	
 	/**
-	* Handler for BeforePageDisplay hook. Adds required modules for MeetingMinutes
-	* @see http://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
-	* @param $out OutputPage object
-	* @param $skin Skin being used.
-	* @return bool true in all cases
-	*/
-	// static function onBeforePageDisplay( $out, $skin ) {
-		// $out->addModules( array( 'ext.meetingminutes.base', 'ext.meetingminutes.form' ) );
-	// }
-
-	/**
 	* Handler for meetingminutesform parser function.
-	* @see http://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	* @param $parser Parser object
 	* @param $frame FIXME: what does frame really do?
 	* @param $args array of arguments passed to parser function
@@ -155,21 +145,29 @@ class Setup {
 	static function renderMeetingMinutesFormParserFunction ( &$parser, $frame, $args ) {
 		global $wgOut;
 		$wgOut->addModules( array( 'ext.meetingminutes.form' ) );
-		return '';
+		return ''; // currently doing nothing...parser function did not work for loading CSS.
 	}
 	
 	/**
 	* Handler for meetingminutesform parser function.
-	* @see http://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	* @param $parser Parser object
 	* @param $frame FIXME: what does frame really do?
 	* @param $args array of arguments passed to parser function
 	* @return bool true in all cases
 	*/
 	static function renderMeetingMinutesTemplateParserFunction ( &$parser, $frame, $args ) {
-		global $wgOut;
-		$wgOut->addModules( array( 'ext.meetingminutes.template' ) );
-		return '';
+		return ''; // currently doing nothing...parser function did not work for loading CSS.
 	}
 
+	/**
+	* Handler for BeforePageDisplay hook. Adds required modules for MeetingMinutes
+	* @see http://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
+	* @param $out OutputPage object
+	* @param $skin Skin being used.
+	* @return bool true in all cases
+	*/
+	public static function onBeforePageDisplay( \OutputPage &$out, \Skin &$skin ) {
+		$out->addModules( array( 'ext.meetingminutes.template' ) );
+		return true;
+	}
 }

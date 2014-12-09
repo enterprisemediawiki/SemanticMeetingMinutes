@@ -36,7 +36,7 @@ $GLOBALS['wgAutoloadClasses']['MeetingMinutes\Setup'] = __DIR__ . '/Setup.php';
 
 // Setup parser functions
 $GLOBALS['wgHooks']['ParserFirstCallInit'][] = 'MeetingMinutes\Setup::setupParserFunctions';
-// $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'MeetingMinutes\Setup::onBeforePageDisplay';
+$GLOBALS['wgHooks']['BeforePageDisplay'][] = 'MeetingMinutes\Setup::onBeforePageDisplay';
 
 
 $ExtensionMeetingMinutesResourceTemplate = array(
