@@ -25,7 +25,7 @@ $GLOBALS['wgExtensionCredits']['semantic'][] = array(
 	'url'            => 'http://github.com/enterprisemediawiki/SemanticMeetingMinutes',
 	'author'         => 'James Montalvo',
 	'descriptionmsg' => 'meetingminutes-desc',
-	'version'        => '0.2.1'
+	'version'        => '0.3.0'
 );
 
 $GLOBALS['wgMessagesDirs']['MeetingMinutes'] = __DIR__ . '/i18n';

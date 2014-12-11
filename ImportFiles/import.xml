@@ -38,14 +38,14 @@
     <ns>10</ns>
     <id>5</id>
     <revision>
-      <id>36</id>
-      <parentid>5</parentid>
-      <timestamp>2014-12-09T16:20:03Z</timestamp>
+      <id>65</id>
+      <parentid>36</parentid>
+      <timestamp>2014-12-11T14:20:49Z</timestamp>
       <contributor>
         <username>Ejmontal</username>
         <id>1</id>
       </contributor>
-      <text xml:space="preserve" bytes="2989">&lt;includeonly&gt;&lt;!--
+      <text xml:space="preserve" bytes="2994">&lt;includeonly&gt;&lt;!--
 # Template:Meeting
 #   (1) Setup JS/CSS and category
 #   (2) Add category
@@ -110,7 +110,7 @@
 | {{#arraymap:{{{Managed by cadre(s)|}}}|,|x|[[Managed by cadre::x]]}}
 |-
 ! Notable attendee(s)
-| {{#arraymap:{{{Notable attendee(s)|}}}|,|x|[[Notable attendee::x]]}}
+| {{#arraymap:{{{Notable attendee(s)|}}}|,|x|[[Notable attendee::User:x]]}}
 |}
 &lt;!--
 
@@ -176,7 +176,7 @@ It should be called in the following format:
 &lt;/pre&gt;
 Edit the page to see the template text.
 &lt;/noinclude&gt;</text>
-      <sha1>2c63o4icboba8ty4neccsvmxw99pj10</sha1>
+      <sha1>ibaq9o2w9shbp9lvmiauh3el8mxozgg</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>
@@ -186,13 +186,14 @@ Edit the page to see the template text.
     <ns>10</ns>
     <id>6</id>
     <revision>
-      <id>6</id>
-      <timestamp>2014-11-26T16:29:13Z</timestamp>
+      <id>64</id>
+      <parentid>6</parentid>
+      <timestamp>2014-12-11T14:18:27Z</timestamp>
       <contributor>
         <username>Ejmontal</username>
         <id>1</id>
       </contributor>
-      <text xml:space="preserve" bytes="2431">&lt;includeonly&gt;&lt;!--
+      <text xml:space="preserve" bytes="2436">&lt;includeonly&gt;&lt;!--
 #
 # Template:Meeting minutes
 #   (1) Setup JS/CSS and category
@@ -245,7 +246,7 @@ Edit the page to see the template text.
 | [[Start time::{{{Start time hour|}}}:{{{Start time minute|}}}]]
 |-
 ! Notes taken by
-| {{#arraymap:{{{Notes taken by|}}}|,|x|[[Notes taken by::x]]}}
+| {{#arraymap:{{{Notes taken by|}}}|,|x|[[Notes taken by::User:x]]}}
 |-
 ! style=&quot;text-align: center; background-color:#ccccff;&quot; colspan=&quot;2&quot; |&lt;big&gt;Meeting Documents&lt;/big&gt;
 |-
@@ -297,7 +298,7 @@ If edited manually, it should be called in the following format:
 
 Edit the page to see the template text.
 &lt;/noinclude&gt;</text>
-      <sha1>chx9ygq46mflpuby9es2w6fxcybfo5a</sha1>
+      <sha1>rgum81qvygmcw23g012km1umuwj4ljx</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>
@@ -620,6 +621,131 @@ The above wikitext displays as {{File link | file=http://example.com/somefile.pd
     </revision>
   </page>
   <page>
+    <title>Template:Collapsible</title>
+    <ns>10</ns>
+    <id>42</id>
+    <revision>
+      <id>63</id>
+      <parentid>59</parentid>
+      <timestamp>2014-12-11T14:16:21Z</timestamp>
+      <contributor>
+        <username>Ejmontal</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="3181">&lt;noinclude&gt;This template creates a content field which can be shown/hidden by the click of a button.
+
+== Use the following form  ==
+&lt;pre&gt;
+{{Collapsible
+  | Content = 
+  | Collapse text = (default = Collapse)
+  | Expand text = (default = Expand)
+  | Start hidden = (true or false, default = false)
+  | Class = (class applied to the outermost &lt;div&gt;)
+  | Before trigger = (text, html, wiki syntax to go before trigger; default = blank)
+  | After trigger = (text, html, wiki syntax to go after trigger but before content; default = blank)
+}}
+&lt;/pre&gt;
+
+
+== Example 1 ==
+=== Code ===
+&lt;pre&gt;
+{{Collapsible
+  | Content = 
+* Line one
+* Line 2
+* Line C
+* Line IV
+  | Collapse text = Collapse This
+  | Expand text = 
+  | Start hidden = true
+  | Class = 
+  | Before trigger = Click here to:&amp;amp;nbsp;
+  | After trigger = !
+}}
+&lt;/pre&gt;
+=== Result ===
+{{Collapsible
+  | Content = 
+* Line one
+* Line 2
+* Line C
+* Line IV
+  | Collapse text = Collapse This
+  | Expand text = 
+  | Start hidden = true
+  | Class = 
+  | Before trigger = Click here to:&amp;nbsp;
+  | After trigger = !
+}}
+
+Note: If you want a space between the colon in &quot;Click here to:&quot; and the expand/collapse button, you need to add a special character. Just typing a regular space (hitting the space bar) will not work, as MediaWiki will ignore this white space. Instead you need to add a [http://en.wikipedia.org/wiki/Non-breaking_space Non-breaking space], by typing &lt;code&gt;&amp;amp;nbsp;&lt;/code&gt; after the colon.
+
+== Example 2 ==
+=== Code ===
+&lt;pre&gt;
+{{Collapsible
+  | Content = 
+* Line one
+* Line 2
+* Line C
+* Line IV
+  | Collapse text = Hide
+  | Expand text = Show
+  | Start hidden = 
+  | Class = 
+  | Before trigger =  
+  | After trigger = 
+}}
+&lt;/pre&gt;
+=== Result ===
+{{Collapsible
+  | Content = 
+* Line one
+* Line 2
+* Line C
+* Line IV
+  | Collapse text = Hide
+  | Expand text = Show
+  | Start hidden = 
+  | Class = 
+  | Before trigger =  
+  | After trigger = 
+}}
+&lt;/noinclude&gt;&lt;includeonly&gt;&lt;!--
+
+
+    Create the initial &quot;wrapper&quot; &lt;div&gt;
+        * Add optional Class
+        * If content should initially be hidden add the smm-collapsed class
+        * Add the text that should be used for the expand and collapse triggers
+
+--&gt;&lt;div class=&quot;smm-collapsible {{{Class|}}} {{#ifeq: {{{Start hidden}}} | true | smm-collapsed | }}&quot; data-collapsetext=&quot;{{#if: {{{Collapse text|}}} | {{{Collapse text|}}} | Collapse}}&quot; data-expandtext=&quot;{{#if: {{{Expand text|}}} | {{{Expand text|}}} | Expand}}&quot;&gt;&lt;!--
+
+
+    Optionally create elements that will go before and after the trigger
+        * Trigger = the &quot;link&quot; which will expand/collapse the content
+        * The trigger will be added via javascript in common.js
+        * Wrap Before trigger and After trigger in &lt;span&gt; tags for common.js and common.css to access them
+
+--&gt;{{#if: {{{Before trigger|}}} | &lt;span class=&quot;pre-trigger&quot;&gt;{{{Before trigger|}}}&lt;/span&gt; | }}{{#if: {{{After trigger|}}} | &lt;span class=&quot;post-trigger&quot;&gt;{{{After trigger|}}}&lt;/span&gt; | }}&lt;!--
+
+
+    Create content element and close out &quot;wrapper&quot; &lt;div&gt;
+        * If no &quot;Content&quot; parameter, use first parameter
+
+--&gt;&lt;div class=&quot;smm-collapsible-content&quot;&gt;{{#if: {{{Content|}}} |&amp;nbsp;
+{{{Content|}}} |&amp;nbsp;
+{{{1}}} }}&lt;/div&gt;&lt;/div&gt;&lt;!--
+
+--&gt;&lt;/includeonly&gt;</text>
+      <sha1>a6p19wczl21ntjcovx6xw6ao8qu92xe</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
     <title>Form:Meeting</title>
     <ns>106</ns>
     <id>8</id>
@@ -694,14 +820,14 @@ if a page with that name already exists, you will be sent to a form to edit that
     <ns>106</ns>
     <id>9</id>
     <revision>
-      <id>50</id>
-      <parentid>49</parentid>
-      <timestamp>2014-12-09T17:01:50Z</timestamp>
+      <id>62</id>
+      <parentid>61</parentid>
+      <timestamp>2014-12-11T14:14:37Z</timestamp>
       <contributor>
         <username>Ejmontal</username>
         <id>1</id>
       </contributor>
-      <text xml:space="preserve" bytes="4766">&lt;includeonly&gt;{{#meetingminutesform:}}__NOTOC__{{{info|page name=&lt;Meeting minutes[Meeting type]&gt; - &lt;Meeting minutes[Meeting date]&gt;}}}
+      <text xml:space="preserve" bytes="4664">&lt;includeonly&gt;{{#meetingminutesform:}}__NOTOC__{{{info|page name=&lt;Meeting minutes[Meeting type]&gt; - &lt;Meeting minutes[Meeting date]&gt;}}}
 &lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
 {{{for template|Meeting minutes}}}&lt;!--
 
@@ -786,20 +912,20 @@ Local files must be uploaded first. See [[Help:Meeting Minutes|the help page]] f
 
 --&gt;
 == Free text ==
-
-&lt;div class=&quot;montalvo-collapsible mw-collapsed&quot; data-collapsetext=&quot;Hide Free Text&quot; data-expandtext=&quot;Show Free Text Entry&quot;&gt;
-  &lt;div class=&quot;mw-collapsible-content&quot;&gt;
+{{Collapsible
+  | Content =
 * '''Use this field ''very'' sparingly'''
 * Nothing in this field will be distributed to related pages
 * Info in this field will be added to the end of the meeting minutes page
 {{{standard input|free text|rows=10}}}
-  &lt;/div&gt;
-&lt;/div&gt;
-
+  | Collapse text = Hide Free Text
+  | Expand text = Show Free Text Entry
+  | Start hidden = true
+}}
 
 == Save Page ==
-&lt;div class=&quot;montalvo-collapsible mw-collapsed&quot; data-collapsetext=&quot;Hide Help&quot; data-expandtext=&quot;Show Help&quot;&gt;
-  &lt;div class=&quot;mw-collapsible-content&quot;&gt;
+{{Collapsible
+  | Content =
 * '''Summary:''' Not required, but recommended if making a revision to a page. The summary will be included emails sent to people watching this page.
 * '''Minor edit checkbox:''' Not required
 * '''Watch this page checkbox:''' Check this box. If you are editing this page, in all likelihood you care about the content. Watch the page to have greater visibility into future changes. You can make it so the box is automatically checked by editing your preferences (top right of the screen). For more info see [[Help:Watching Pages]].
@@ -807,8 +933,10 @@ Local files must be uploaded first. See [[Help:Meeting Minutes|the help page]] f
 * '''Show preview:''' Click this to see what your wiki-markup will look like when formatted. Very handy for learning how to use the wiki.
 * '''Show changes:''' Shows all changes you've made, compared to the previous revision (doesn't do much when creating a brand new page).
 * '''Cancel:''' Don't click this unless you want to lose what you've been working on.
-  &lt;/div&gt;
-&lt;/div&gt;
+  | Collapse text = Hide Help
+  | Expand text = Show Help
+  | Start hidden = true
+}}
 
 {{{standard input|summary}}}
 
@@ -823,7 +951,7 @@ Local files must be uploaded first. See [[Help:Meeting Minutes|the help page]] f
 
 --&gt;&lt;noinclude&gt;
 This is the &quot;Meeting Minutes&quot; form. Click edit to make changes to the structure of the form itself. Or [[Special:FormEdit/Meeting_Minutes|create new meeting minutes]].&lt;!--{{#forminput:form=Meeting Minutes}}--&gt;&lt;/noinclude&gt;</text>
-      <sha1>snbov127hl8l71qquy8vqm42ca2tnut</sha1>
+      <sha1>rp260gs4l9czatk03dkenbtkbx5uet3</sha1>
       <model>wikitext</model>
       <format>text/x-wiki</format>
     </revision>

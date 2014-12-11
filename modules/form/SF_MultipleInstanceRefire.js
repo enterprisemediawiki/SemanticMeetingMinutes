@@ -20,7 +20,11 @@ window.addMultipleInstanceRefire = function(options, refireFn) {
 	if (reorder)
 		console.log("not yet supported"); //window.SF_MultipleInstanceRefire_reorder.push(refireFn);
 
-	setTimeout(refireFn, 2000); // without delay some things aren't fully setup yet, even after DOM load
+	// Semantic Forms passes an options.pageload = true param. Should that 
+	// determine if this is fired?
+	// FIXME: without delay some things aren't fully setup yet, even after DOM
+	// load. This sucks.
+	setTimeout(refireFn, 2000); 
 	
 };
 
