@@ -12,9 +12,23 @@ The recommended way to install Semantic Meeting Minutes (SMM) is with [Composer]
 
 ### Step 1: Install SMM
 
-Open a terminal window, and change directory to your wiki. Then run the following command to install SMM and several of its dependencies. Note that one of the dependencies is Semantic MediaWiki, which has additional requirements for install. See its [install instructions](smwinstall) for more info.
+Open a terminal window, and change directory to your wiki. Then run the following command to install SMM and several of its dependencies.
 
     php composer.phar require mediawiki/semantic-meeting-minutes ~0.3
+
+### Step 1.1: Enable Semantic MediaWiki
+ 
+If you didn't previously have Semantic MediaWiki installed (the Composer command above will install it if you did't have it already) make sure to add the following to LocalSettings.php:
+
+```php
+enableSemantics( 'name-of-your-wiki' );
+```
+
+Then run the following command from your MediaWiki install path:
+
+    php maintenance/update.php
+
+For additional info on installing SMW, see its [install instructions](smwinstall).
 
 ### Step 2: Install Non-Composer Dependencies
 
@@ -23,6 +37,14 @@ Ideally all extensions would support Composer, but at this time not all do. You 
     git clone git clone https://git.wikimedia.org/git/mediawiki/extensions/ParserFunctions.git
     git clone git clone https://git.wikimedia.org/git/mediawiki/extensions/Variables.git
     git clone git clone https://git.wikimedia.org/git/mediawiki/extensions/SemanticForms.git
+
+Then add the extensions to your LocalSettings.php file:
+
+```php
+require_once "$IP/extensions/ParserFunctions/ParserFunctions.php";
+require_once "$IP/extensions/Variables/Variables.php";
+require_once "$IP/extensions/SemanticForms/SemanticForms.php";
+```
 
 ### Step 3: Import forms, templates, categories and properties
 
