@@ -14,7 +14,7 @@ The recommended way to install Semantic Meeting Minutes (SMM) is with [Composer]
 
 Open a terminal window, and change directory to your wiki. Then run the following command to install SMM and several of its dependencies. Note that one of the dependencies is Semantic MediaWiki, which has additional requirements for install. See its [install instructions](smwinstall) for more info.
 
-    php composer.phar require mediawiki/semantic-meeting-minutes: ~0.1
+    php composer.phar require mediawiki/semantic-meeting-minutes: ~0.3
 
 ### Step 2: Install Non-Composer Dependencies
 
@@ -37,33 +37,10 @@ It is possible that the SMM pages you imported in step 3 could have overwritten 
 	
 ### Step 5: Optional steps
 
-It is highly recommended that you make two further changes to get the most out of Semantic Meeting Minutes.
-
-1. Update your _Mediawiki:Sidebar_ page and add the following link:
+It is highly recommended that you add the Semantic Meeting Minutes form to your _Mediawiki:Sidebar_ page and add the following link:
 
     Special:FormEdit/Meeting Minutes|Meeting Minutes
 
-2. Create a footer for all pages in the Main namespace, using Extension:HeaderFooter (which was installed automatically when you installed SMM). To do this, go to the page _Mediawiki:Hf-nsfooter-_ and add the following:
-
-```
-{{#ask: [[Topic from meeting::+]][[Related article::{{FULLPAGENAME}}]]
-|mainlabel=-
-|? From page
-|? Has date
-|? Has topic title
-|? Synopsis
-|? Related article
-|link = none
-|format = template
-|template = Meeting references row
-|intro = <h2>Meeting References</h2>
-|offset = 0
-|limit = 10
-|sort = Has date
-|order = desc
-|searchlabel = <br /><br /><br />Click to browse earlier meeting references
-}}
-```
 
 [composer]: https://getcomposer.org/
 [mwcomposer]: https://www.mediawiki.org/wiki/Composer
