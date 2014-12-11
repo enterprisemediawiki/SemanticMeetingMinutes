@@ -14,7 +14,7 @@ The recommended way to install Semantic Meeting Minutes (SMM) is with [Composer]
 
 Open a terminal window, and change directory to your wiki. Then run the following command to install SMM and several of its dependencies. Note that one of the dependencies is Semantic MediaWiki, which has additional requirements for install. See its [install instructions](smwinstall) for more info.
 
-    php composer.phar require mediawiki/semantic-meeting-minutes: ~0.3
+    php composer.phar require mediawiki/semantic-meeting-minutes ~0.3
 
 ### Step 2: Install Non-Composer Dependencies
 
