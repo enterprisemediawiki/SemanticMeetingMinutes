@@ -45,3 +45,46 @@ style="width: 30em; font-size: 90%; border: 1px solid #aaaaaa; background-color:
 
 
 */
+
+/* 
+Meeting Minutes box 
+
+Can be used in conjunction with Extension:MasonryMainPage
+*/
+table.main-page-meeting-minutes-box {
+  width:       100%;
+  border:     1px solid #cef2e0;
+  background: #f5fffa;
+  margin:     0 1% 0 0;
+  padding:    5px;
+}
+table.main-page-meeting-minutes-box th {
+  color:      black;
+  padding:    0.2em 0.4em;
+  background: #cef2e0;
+  border:     1px solid #a3bfb1;
+  text-align: left;
+  font-size:  130%;
+}
+table.main-page-meeting-minutes-box td {
+  font-size:      110%;
+  vertical-align: top;
+}
+table.main-page-meeting-minutes-box-yellow {
+  background:   #FFFBCC;
+  border:       1px solid #FFF25A;
+}
+table.main-page-meeting-minutes-box-yellow th {
+  background:   #FFF582;
+  border:       1px solid #FFF25A;
+}
+table.main-page-meeting-minutes-row {
+  color:      black;
+  text-align: left;
+}
+table.main-page-meeting-minutes-row th {
+  font-size:  110%;
+}
+table.main-page-meeting-minutes-row td {
+  font-size:  95%;
+}
