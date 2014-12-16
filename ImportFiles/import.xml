@@ -327,6 +327,7 @@ Edit the page to see the template text.
 |Has topic title={{{Has topic title|}}}
 |Synopsis={{#synopsize: {{{Full text|}}} | 500 | 1 }}
 |Related article={{{Related article|}}}|+sep=,
+|Index={{#counter:}}
 }}&lt;!--
 
 
@@ -356,6 +357,7 @@ If edited manually, it should be called in the following format:
 |Has date=
 |Full text=
 |Related article(s)=
+|Index=
 |Uploaded files=
 |External links=
 }}
