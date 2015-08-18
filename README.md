@@ -34,9 +34,9 @@ For additional info on installing SMW, see its [install instructions](smwinstall
 
 Ideally all extensions would support Composer, but at this time not all do. You will need to install the ParserFunctions, Variables and Semantic Forms extensions for SMM to work. You can install the latest versions by running the following three commands from your wiki's extensions directory.
 
-    git clone git clone https://git.wikimedia.org/git/mediawiki/extensions/ParserFunctions.git
-    git clone git clone https://git.wikimedia.org/git/mediawiki/extensions/Variables.git
-    git clone git clone https://git.wikimedia.org/git/mediawiki/extensions/SemanticForms.git
+    git clone https://git.wikimedia.org/git/mediawiki/extensions/ParserFunctions.git
+    git clone https://git.wikimedia.org/git/mediawiki/extensions/Variables.git
+    git clone https://git.wikimedia.org/git/mediawiki/extensions/SemanticForms.git
 
 Then add the extensions to your LocalSettings.php file:
 
