@@ -56,10 +56,12 @@ $GLOBALS['wgResourceModules'] += array(
 		'styles' => 'form/meeting-minutes.css',
 		'scripts' => array( 'form/SF_MultipleInstanceRefire.js', 'form/meeting-minutes.js' ),
 		// 'dependencies' => array( 'mediawiki.Uri' ),
+		'position' => 'top',
 	),
 
 	'ext.meetingminutes.template' => $ExtensionMeetingMinutesResourceTemplate + array(
 		'styles' => 'template/template.css',
+		'position' => 'top',
 	),
 
 );
