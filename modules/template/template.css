@@ -3,10 +3,10 @@
 	margin-bottom: .5em;
 	float: right;
 	margin-left:2.5em;
-	width: 300px;
+	/*width: 300px;*/ /* caused text to overlap with TOC sometimes */
 }
 
-#ext-meeting-minutes-toc-wrapper .toc { 
+#ext-meeting-minutes-toc-wrapper .toc {
     float: right !important;
 	width: 100% !important;
 }
@@ -46,8 +46,8 @@ style="width: 30em; font-size: 90%; border: 1px solid #aaaaaa; background-color:
 
 */
 
-/* 
-Meeting Minutes box 
+/*
+Meeting Minutes box
 
 Can be used in conjunction with Extension:MasonryMainPage
 */
