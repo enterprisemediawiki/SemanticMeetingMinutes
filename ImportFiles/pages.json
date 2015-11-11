@@ -1,0 +1,50 @@
+{
+	"Template": [
+		"Meeting",
+		"Meeting minutes",
+		"Topic from meeting",
+		"Meeting Minutes Block",
+		"Meeting Minutes Block info for table row",
+		"Meeting Minutes Block info for table row highlighted",
+		"Meeting references row",
+		"File link",
+		"Meeting Minutes/Files",
+		"Collapsible"
+	],
+
+	"Form": [
+		"Meeting",
+		"Meeting Minutes"
+	],
+
+	"Category": [
+		"Meeting",
+		"Meeting Minutes"
+	],
+
+	"Property": [
+		"Call in number",
+		"Call in password",
+		"Managed by cadre",
+		"Standard day",
+		"Standard time",
+		"Meeting date",
+		"Meeting type",
+		"Notes taken by",
+		"Start time",
+		"From page",
+		"Has date",
+		"Has topic title",
+		"Index",
+		"Related article",
+		"Synopsis",
+		"Building",
+		"Notable attendee",
+		"Overview",
+		"Room"
+	],
+
+	"Mediawiki": [
+		"Hf-nsfooter-"
+	]
+}
