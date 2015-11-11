@@ -1,8 +1,8 @@
 <?php
-/** 
+/**
  * The MeetingMinutes extension provides JS and CSS to enable recording meeting
  * minutes in SMW. See README.md.
- * 
+ *
  * Documentation: https://github.com/enterprisemediawiki/SemanticMeetingMinutes
  * Support:       https://github.com/enterprisemediawiki/SemanticMeetingMinutes
  * Source code:   https://github.com/enterprisemediawiki/SemanticMeetingMinutes
@@ -19,13 +19,15 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 	die( 'MeetingMinutes extension' );
 }
 
+define( 'SEMANTIC_MEETING_MINUTES_VERSION', '0.4.0' );
+
 $GLOBALS['wgExtensionCredits']['semantic'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'Semantic Meeting Minutes',
 	'url'            => 'http://github.com/enterprisemediawiki/SemanticMeetingMinutes',
 	'author'         => 'James Montalvo',
 	'descriptionmsg' => 'meetingminutes-desc',
-	'version'        => '0.3.0'
+	'version'        => SEMANTIC_MEETING_MINUTES_VERSION
 );
 
 $GLOBALS['wgMessagesDirs']['MeetingMinutes'] = __DIR__ . '/i18n';
