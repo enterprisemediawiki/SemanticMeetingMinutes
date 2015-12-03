@@ -1,50 +1,40 @@
 {
-	"Template": [
-		"Meeting",
-		"Meeting minutes",
-		"Topic from meeting",
-		"Meeting Minutes Block",
-		"Meeting Minutes Block info for table row",
-		"Meeting Minutes Block info for table row highlighted",
-		"Meeting references row",
-		"File link",
-		"Meeting Minutes/Files",
-		"Collapsible"
-	],
+	"Template:Meeting": "Template/Meeting",
+	"Template:Meeting minutes": "Template/Meeting minutes",
+	"Template:Topic from meeting": "Template/Topic from meeting",
+	"Template:Meeting Minutes Block": "Template/Meeting Minutes Block",
+	"Template:Meeting Minutes Block info for table row": "Template/Meeting Minutes Block info for table row",
+	"Template:Meeting Minutes Block info for table row highlighted": "Template/Meeting Minutes Block info for table row highlighted",
+	"Template:Meeting references row": "Template/Meeting references row",
+	"Template:File link": "Template/File link",
+	"Template:Meeting Minutes/Files": "Template/Meeting Minutes/Files",
+	"Template:Collapsible": "Template/Collapsible",
 
-	"Form": [
-		"Meeting",
-		"Meeting Minutes"
-	],
+	"Form:Meeting": "Form/Meeting",
+	"Form:Meeting Minutes": "Form/Meeting Minutes",
 
-	"Category": [
-		"Meeting",
-		"Meeting Minutes"
-	],
+	"Category:Meeting": "Category/Meeting",
+	"Category:Meeting Minutes": "Category/Meeting Minutes",
 
-	"Property": [
-		"Call in number",
-		"Call in password",
-		"Managed by cadre",
-		"Standard day",
-		"Standard time",
-		"Meeting date",
-		"Meeting type",
-		"Notes taken by",
-		"Start time",
-		"From page",
-		"Has date",
-		"Has topic title",
-		"Index",
-		"Related article",
-		"Synopsis",
-		"Building",
-		"Notable attendee",
-		"Overview",
-		"Room"
-	],
+	"Property:Call in number": "Property/Call in number",
+	"Property:Call in password": "Property/Call in password",
+	"Property:Managed by cadre": "Property/Managed by cadre",
+	"Property:Standard day": "Property/Standard day",
+	"Property:Standard time": "Property/Standard time",
+	"Property:Meeting date": "Property/Meeting date",
+	"Property:Meeting type": "Property/Meeting type",
+	"Property:Notes taken by": "Property/Notes taken by",
+	"Property:Start time": "Property/Start time",
+	"Property:From page": "Property/From page",
+	"Property:Has date": "Property/Has date",
+	"Property:Has topic title": "Property/Has topic title",
+	"Property:Index": "Property/Index",
+	"Property:Related article": "Property/Related article",
+	"Property:Synopsis": "Property/Synopsis",
+	"Property:Building": "Property/Building",
+	"Property:Notable attendee": "Property/Notable attendee",
+	"Property:Overview": "Property/Overview",
+	"Property:Room": "Property/Room",
 
-	"Mediawiki": [
-		"Hf-nsfooter-"
-	]
+	"Mediawiki:Hf-nsfooter-": "Mediawiki/Hf-nsfooter-"
 }

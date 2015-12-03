@@ -40,6 +40,7 @@ $GLOBALS['wgAutoloadClasses']['MeetingMinutes\Setup'] = __DIR__ . '/Setup.php';
 $GLOBALS['wgHooks']['ParserFirstCallInit'][] = 'MeetingMinutes\Setup::setupParserFunctions';
 $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'MeetingMinutes\Setup::onBeforePageDisplay';
 
+$GLOBALS['egSmmPageFilePath'] = __DIR__ . "/ImportFiles/";
 
 $ExtensionMeetingMinutesResourceTemplate = array(
 	'localBasePath' => __DIR__ . '/modules',
