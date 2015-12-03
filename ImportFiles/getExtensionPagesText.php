@@ -37,7 +37,7 @@ class SemanticMeetingMinutesGetExtensionPagesText extends Maintenance {
 
 		$this->mDescription = "Get the current text of all the pages defined by the extension and save to files.";
 
-		$this->addOption( 'dry-run', 'Parse dump without actually importing pages' );
+		$this->addOption( 'dry-run', 'See what would be changed without making changes' );
 
 	}
 
