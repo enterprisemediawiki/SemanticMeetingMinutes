@@ -1,0 +1,53 @@
+<noinclude>
+This is the "Meeting" form.
+To create a page with this form, enter the page name below;
+if a page with that name already exists, you will be sent to a form to edit that page.
+
+
+{{#forminput:form=Meeting}}
+
+</noinclude><includeonly>{{{info|page name=<Meeting[Meeting title]>}}}
+<div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+{{{for template|Meeting}}}
+{| class="formtable"
+! Meeting Title:
+| {{{field|Meeting title|mandatory|input type=text}}}
+|-
+! Standard day:
+| {{{field|Standard day}}}
+|-
+! Standard time:
+| {{{field|Standard time|input type=text}}} (format = 09:00, 24-hour time, please)
+|-
+! Building:
+| {{{field|Building|input type=text}}}
+|-
+! Room:
+| {{{field|Room|input type=text}}}
+|-
+! Call-in number:
+| {{{field|Call-in number|input type=text}}}
+|-
+! Call-in password:
+| {{{field|Call-in password|input type=text}}}
+|-
+! Managed by cadre(s):
+| {{{field|Managed by cadre(s)|input type=text}}}
+|-
+! Notable attendee(s):
+| {{{field|Notable attendee(s)|input type=textarea with autocomplete|values from category=Person}}}
+|}
+'''Overview:''' {{{field|Overview|autogrow|input type=textarea}}}
+{{{end template}}}
+
+'''Free text:'''
+
+{{{standard input|free text|autogrow|rows=10}}}
+
+
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly>

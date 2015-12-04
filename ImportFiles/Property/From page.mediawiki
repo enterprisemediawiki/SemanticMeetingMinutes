@@ -1,0 +1,1 @@
+This is a property of type [[Has type::Page]]. It is used by calls to the [http://www.mediawiki.org/wiki/Extension:Semantic_Internal_Objects Semantic Internal Objects] parser function #set_internal to point back to the page on which the #set_internal call was made. There may be a built-in method to do this, but it is not as clear as explicitly calling out a "From page" property.

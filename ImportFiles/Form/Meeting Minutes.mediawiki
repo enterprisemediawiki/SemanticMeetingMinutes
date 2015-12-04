@@ -1,0 +1,134 @@
+<includeonly>__NOTOC__{{#meetingminutesform:}}{{{info|page name=<Meeting minutes[Meeting type]> - <Meeting minutes[Meeting date]>}}}
+<div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+{{{for template|Meeting minutes}}}<!--
+
+
+Main Form Definition
+
+-->
+<div class="meeting-minutes-save-often">
+<h3>Remember...</h3>
+'''[[Help:Save Often|Save often or use a text editor]]'''. Revisions are free. 
+
+[[File:Tutorial.png|link={{filepath:Meeting Minutes Tutorial.swf}}|220px]]
+</div>
+
+<h2>Meeting Details</h2>
+<div class="meeting-minutes-edit-section multipleTemplateInstance">
+{| class="formtable meeting-minutes-formtable"
+! Meeting name
+| {{{field|Meeting type|input type=combobox|values from category=Meeting|mandatory}}}
+|-
+! Meeting date
+| {{{field|Meeting date|mandatory}}}
+|-
+! Start time
+| {{{field|Start time hour|input type=text|maxlength=2|size=2|mandatory}}} : {{{field|Start time minute|input type=text|maxlength=2|size=2|mandatory}}} (24-hour time, please)
+|-
+! Notes taken by
+| {{{field|Notes taken by|values from category=Person|mandatory|class=meeting-minutes-author-field}}}
+|}
+</div>
+
+<h2>Meeting Files</h2>
+{{{field|Meeting files|holds template}}}<!-- 
+
+
+
+
+
+
+--><h1 style="margin-top:30px;">Meeting Topics</h1>
+
+{{{field|Topics|holds template}}}
+
+{{{end template}}}<!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{Meeting Minutes/Form Help/Topic Title}}
+{{Meeting Minutes/Form Help/Topic Synopsis}}
+{{Meeting Minutes/Form Help/Topic Related Articles}}
+{{{field|Synopsis|input type=textarea|autogrow|maxlength=255|class=full-width no-links-allowed character-limit-255|placeholder=Synopsis}}}
+{{Meeting Minutes/Form Help/Topic Full Text}}
+
+    Topics
+
+-->{{{for template|Topic from meeting|multiple|embed in field=Meeting minutes[Topics]|add button text=Add Topic}}}<div class="instance-wrapper">
+{{{field|Has topic title|class=full-width no-links-allowed title-input-field|placeholder=Topic Title}}}
+
+{{{field|Related article|input type=text with autocomplete|list|values from namespace=Main|class=full-width no-links-allowed|placeholder=Related articles}}}
+
+{{{field|Full text|input type=textarea|autogrow|class=full-width shrink-on-blur emphasize meeting-topic-full-text|cols=75}}}
+</div>{{{end template}}}<!--
+
+
+
+    Meeting Files (uploads and external files)
+
+-->{{{for template|Meeting Minutes/Files|multiple|embed in field=Meeting minutes[Meeting files]|add button text=Add File}}}
+<div class="mti-help-box mti-hide-on-blur">
+Local files must be uploaded first. See [[Help:Meeting Minutes|the help page]] for more info.
+</div>
+{| class="formtable meeting-minutes-formtable"
+! Local File Name or URL
+| {{{field|File or URL|class=full-width no-links-allowed|placeholder=Enter filename starting with File: or URL starting with http}}}
+|-
+! Alternate name
+| {{{field|Alternate name|class=full-width no-links-allowed}}}
+|}
+{{{end template}}}<!--
+
+-->
+== Free text ==
+{{Collapsible
+  | Content =
+* '''Use this field ''very'' sparingly'''
+* Nothing in this field will be distributed to related pages
+* Info in this field will be added to the end of the meeting minutes page
+{{{standard input|free text|rows=10}}}
+  | Collapse text = Hide Free Text
+  | Expand text = Show Free Text Entry
+  | Start hidden = true
+}}
+
+
+== Save Page ==
+{{Collapsible
+  | Content =
+* '''Summary:''' Not required, but recommended if making a revision to a page. The summary will be included emails sent to people watching this page.
+* '''Minor edit checkbox:''' Not required
+* '''Watch this page checkbox:''' Check this box. If you are editing this page, in all likelihood you care about the content. Watch the page to have greater visibility into future changes. You can make it so the box is automatically checked by editing your preferences (top right of the screen). For more info see [[Help:Watching Pages]].
+* '''Save page:''' Click this when you're done to save the page.
+* '''Show preview:''' Click this to see what your wiki-markup will look like when formatted. Very handy for learning how to use the wiki.
+* '''Show changes:''' Shows all changes you've made, compared to the previous revision (doesn't do much when creating a brand new page).
+* '''Cancel:''' Don't click this unless you want to lose what you've been working on.
+  | Collapse text = Hide Help
+  | Expand text = Show Help
+  | Start hidden = true
+}}
+
+
+{{{standard input|summary}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+</includeonly><!--
+
+
+
+  Below is content only shown on the Form:Meeting Minutes page
+
+--><noinclude>
+This is the "Meeting Minutes" form. Click edit to make changes to the structure of the form itself. Or [[Special:FormEdit/Meeting_Minutes|create new meeting minutes]].<!--{{#forminput:form=Meeting Minutes}}--></noinclude>

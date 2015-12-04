@@ -1,0 +1,52 @@
+<noinclude>'''Template:File link''' is an alternate method of linking to files in this wiki. It allows all file linking, both to local wiki files and external files, to be performed with one method. See '''[[Help:Linking to files]]''' for a tutorial.
+
+== Local Files ==
+For local files use the format below. Note that the "alt" parameter is optional.
+<pre>
+{{File link | file=File:International Space Station.pdf | alt=ISS Presentation }} (note, this file has to exist for it to display properly)
+</pre>
+
+The above wikitext displays as {{File link | file=File:International Space Station.pdf | alt=ISS Presentation }}. Note the "file info" link. There has been confusion with some wiki users who click on file links which bring them to another wiki page instead of directly to the file. Using this method, the major link will bring them directly to the file, whereas the "file info" link will bring them to the page where they can see the file upload history and upload new versions of the file.
+
+If the local file does not exist, the output will look like {{File link | file=File:My Fictitious File.doc | alt=Alt name won't show }} 
+
+== External Files ==
+For external files use the format below. Make sure to include <nowiki>http://</nowiki> or <nowiki>https://</nowiki> at the beginning of the URL. Again the "alt" parameter is optional, but it will look ugly without it in this case.
+<pre>
+{{File link | file=http://example.com/somefile.pdf | alt=My File }}
+</pre>
+
+The above wikitext displays as {{File link | file=http://example.com/somefile.pdf | alt=My File }}. Note that there is no "file info" link, since the EVA Wiki has no such info for external files.
+
+</noinclude><includeonly><!-- 
+
+    #
+    #  DETERMINES if the filename is a local file or an external file
+    #    #pos returns 0 if "File:" is found at the beginning of the string
+    #    returns nothing if "File:" is not found in the string, or a number other than zero if found later in the string
+    #
+-->{{#ifeq: 0 
+    | {{#pos:{{{file}}}|File:}} | <!-- 
+ 
+
+    #
+    #  if filename starts with "File:"
+    #  
+--><span style="white-space:nowrap;">{{#ifexist:{{{file}}}<!--
+
+        -->|[[Media:{{#replace:{{{file}}}|File:}}|{{#if: {{{alt|}}} | {{{alt}}} | {{#replace:{{{file}}}|File:}} }}]]<sup> <nowiki>[</nowiki>[[:{{{file}}}|file info]]<nowiki>]</nowiki></sup>|<!--
+
+        -->[[{{{file}}}]]}}</span>|<!-- 
+
+
+    #
+    #  If does not start with "File:"
+    #  NOTE: the #if statement trims whitespace off of the URL...stupid hack
+    #  
+-->[{{#if:{{{file|}}}|{{{file|}}} }} {{{alt|}}}]<!--
+
+
+    #
+    #  Close out ifeq function
+    #
+-->}}</includeonly>

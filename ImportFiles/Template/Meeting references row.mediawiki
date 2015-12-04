@@ -1,0 +1,15 @@
+<noinclude>
+<pre>
+{{{1|}}} = From page (the name of the EVA page, like STS-132/ULF-4 EVA 2)
+{{{2|}}} = Has date (the date of the EVA)
+{{{3|}}} = Has topic title
+{{{4|}}} = Synopsis
+{{{5|}}} = Related article
+</pre>
+</noinclude><includeonly>
+<h2>[[{{{1|}}}#{{{3|}}}|{{{3|}}}]]</h2>
+{{{4|}}}
+
+<small>'''Date:''' {{{2|}}}<br />
+'''Meeting:''' {{#show: {{{1|}}} | ?Meeting type | link=none}}<br />
+'''Related articles:''' {{#arraymap: {{{5|}}}|,|VAR|[[VAR]]}}</small>
