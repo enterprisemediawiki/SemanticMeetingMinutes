@@ -51,11 +51,11 @@ class SemanticMeetingMinutesImportExtensionPages extends Maintenance {
 		foreach( $pages as $pageTitleText => $filePath ) {
 
 			$wikiPage = WikiPage::factory( Title::newFromText( $pageTitleText ) );
-			$wikiPageContent = $wikiPage->getContent();
+			$wikiPageContent = $wikiPage->getContent()->getNativeData();
 
 			$filePageContent = file_get_contents( "$egSmmPageFilePath/$filePath" );
 
-			if ( $filePageContent !== $wikiPageContent ) {
+			if ( trim( $filePageContent ) !== trim( $wikiPageContent )  ) {
 
 				if ( $dryRun ) {
 					echo "$pageTitleText would be changed.\n";
