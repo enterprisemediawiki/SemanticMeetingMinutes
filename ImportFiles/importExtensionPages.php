@@ -53,7 +53,7 @@ class SemanticMeetingMinutesImportExtensionPages extends Maintenance {
 			$wikiPage = WikiPage::factory( Title::newFromText( $pageTitleText ) );
 			$wikiPageContent = $wikiPage->getContent();
 			if ( $wikiPageContent ) {
-				$wikiPageText = $wikiPageContent->->getNativeData();
+				$wikiPageText = $wikiPageContent->getNativeData();
 			}
 			else {
 				$wikiPageText = '';
