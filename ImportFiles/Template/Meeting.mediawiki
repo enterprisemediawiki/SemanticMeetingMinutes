@@ -1,0 +1,136 @@
+<includeonly><!--
+# Template:Meeting
+#   (1) Setup JS/CSS and category
+#   (2) Add category
+#   (3) Create wrapper div around infobox and table of contents
+#   (4) Create infobox
+#   (5) Close out wrapper div
+#   (6) Show overview of meeting
+#   (7) #ask query for recent meetings
+#   (8) Show link to form
+#   (9) Template documentation (noinclude)
+
+
+
+#
+# (1) Call the #meetingminutestemplate parser function in order to add
+#     the required javascript and CSS to the meeting template (uses same
+#     parser function as Template:Meeting minutes.
+#
+-->{{#meetingminutestemplate:}}<!--
+
+
+#
+# (2) Add Category:Meeting Minutes.
+#
+-->[[Category:Meeting]]<!--
+
+
+#
+# (3) Add wrapper <div> which will go around infobox and table of contents.
+#     This allows the infobox and TOC to both be positioned on the left and
+#     be approximately the same size. FIXME: make them exactly the same size
+#
+--><div id="ext-meeting-minutes-toc-wrapper"><!--
+
+
+#
+# (4) Create infobox
+#
+-->
+{| class="meeting-minutes-infobox"
+! style="text-align: center; background-color:#ccccff;" colspan="2" |<big>{{PAGENAME}}</big>
+|-
+! Standard day
+| {{#if: {{{Standard day|}}} | [[Standard day::{{{Standard day|}}}]] | }}
+|-
+! Standard time
+| {{#if: {{{Standard time|}}} | [[Standard time::{{{Standard time|}}}]] | }}
+|-
+! Building
+| {{#if: {{{Building|}}} | [[Building::{{{Building|}}}]] | }}
+|-
+! Room
+| {{#if: {{{Room|}}} | [[Room::{{{Room|}}}]] | }}
+|-
+! Call-in number
+| {{#if: {{{Call-in number|}}} | [[Call in number::{{{Call-in number|}}}]] | }}
+|-
+! Call-in password
+| {{#if: {{{Call-in password|}}} | [[Call in password::{{{Call-in password|}}}]] | }}
+|-
+! Managed by cadre(s)
+| {{#arraymap:{{{Managed by cadre(s)|}}}|,|x|[[Managed by cadre::x]]}}
+|-
+! Notable attendee(s)
+| {{#arraymap:{{{Notable attendee(s)|}}}|,|x|[[Notable attendee::x]]}}
+|-
+! class="smw-style-infobox-table-header" colspan="2" | Recent Meetings - [[Special:FormEdit/Meeting Minutes|Add Minutes]]
+|-
+| colspan="2" | <!--
+
+#
+# (7) Perform #ask query to show recent meetings
+#
+-->{{#ask: [[Category:Meeting Minutes]] [[Meeting type::{{PAGENAME}}]]
+| ?Meeting date = Date
+| ?Notes taken by
+| link = none
+| sort = Meeting date
+| order = desc
+| limit = 15
+| format = template
+| template = Meeting/Recent Meetings
+| default = No meetings of this type have been added
+| searchlabel = <br />see prior meetings
+}}
+|}
+<!--
+
+#
+# Note: no TOC in Template:Meeting at this time. could add __TOC__ here if desired.
+#
+
+
+
+#
+# (5) Close out <div> wrapper around infobox and TOC
+#
+--></div><!--
+
+
+
+#
+# (6) Show overview of meeting
+#
+-->{{#if: {{{Overview|}}} | {{{Overview}}}{{#set: Overview ={{{Overview}}} }} | <!-- else do nothing --> }}<!--
+
+
+
+#
+# (8) Add link to meeting minutes form
+#
+-->[[Special:FormEdit/Meeting Minutes|Add Meeting Minutes]]<!--
+
+
+
+#
+# (9) Template definition complete. Template documentation below (within noinclude).
+#
+--></includeonly><noinclude>
+This is the "Meeting" template.
+It should be called in the following format:
+<pre>
+{{Meeting
+|Standard day=
+|Standard time=
+|Building=
+|Room=
+|Call-in number=
+|Call-in password=
+|Managed by cadre(s)=
+|Notable attendee(s)=
+}}
+</pre>
+Edit the page to see the template text.
+</noinclude>

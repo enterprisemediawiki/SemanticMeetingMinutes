@@ -1,0 +1,105 @@
+<includeonly><!--
+#
+# Template:Meeting minutes
+#   (1) Setup JS/CSS and category
+#   (2) Add category
+#   (3) Create wrapper div around infobox and table of contents
+#   (4) Create infobox
+#   (5) Specify Table of Contents
+#   (6) Close out wrapper div
+#   (7) Insert topics (using Template:Topic from Meeting)
+#   (8) Template documentation (noinclude)
+
+
+
+#
+# (1) Call the #meetingminutestemplate parser function in order to add
+#     the required javascript and CSS to the meeting minutes template.
+#
+-->{{#meetingminutestemplate:}}<!--
+
+
+#
+# (2) Add Category:Meeting Minutes.
+#
+-->[[Category:Meeting Minutes]]<!--
+
+
+
+#
+# (3) Add wrapper <div> which will go around infobox and table of contents.
+#     This allows the infobox and TOC to both be positioned on the left and
+#     be approximately the same size. FIXME: make them exactly the same size
+#
+--><div id="ext-meeting-minutes-toc-wrapper"><!--
+
+
+#
+# (4) Create the infobox
+#
+-->
+{| class="meeting-minutes-infobox"
+! style="text-align: center; background-color:#ccccff;" colspan="2" |<big>Meeting Minutes</big>
+|-
+! Meeting type
+| [[Meeting type::{{{Meeting type|}}}]]
+|-
+! Meeting date
+| [[Meeting date::{{{Meeting date|}}}]] {{#vardefine:meetingDate|{{{Meeting date|}}} }}
+|-
+! Start time
+| [[Start time::{{{Start time hour|}}}:{{{Start time minute|}}}]]
+|-
+! Notes taken by
+| {{#arraymap:{{{Notes taken by|}}}|,|x|[[Notes taken by::x]]}}
+|-
+! style="text-align: center; background-color:#ccccff;" colspan="2" |<big>Meeting Documents</big>
+|-
+| colspan="2" | {{#if: {{{Meeting files|}}} | {{{Meeting files|}}} | No documents }}
+|}
+<!--
+
+
+
+#
+# (5) Specify the location of the Table of Contents
+#
+-->{{TOC | align=right | width=350px }}
+
+<!-- leave some blank lines above
+
+
+
+#
+# (6) Close out <div> wrapper around infobox and TOC
+#
+--></div><!--
+
+
+#
+# (7) Insert all of the meeting topics. Note: these topics are handled by
+#     Template:Topic from Meeting
+#
+-->{{{Topics|}}}<!--
+
+
+#
+# (8) Template definition complete. Template documentation below (within noinclude).
+#
+--></includeonly><noinclude>
+This is the "Meeting minutes" template. It should be generated using [[Form:Meeting Minutes]].
+
+If edited manually, it should be called in the following format:
+<pre>
+{{Meeting minutes
+|Meeting type=
+|Meeting date=
+|Start time hour=
+|Start time minute=
+|Notes taken by=
+|Topics= <insert instances of [[Template:Topic from Meeting]] here>
+}}
+</pre>
+
+Edit the page to see the template text.
+</noinclude>

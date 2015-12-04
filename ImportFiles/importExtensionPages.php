@@ -26,7 +26,7 @@
 
 // @todo: does this always work if extensions are not in $IP/extensions ??
 // this was what was done by SMW
-$basePath = getenv( 'MW_INSTALL_PATH' ) !== false ? getenv( 'MW_INSTALL_PATH' ) : __DIR__ . '/../..';
+$basePath = getenv( 'MW_INSTALL_PATH' ) !== false ? getenv( 'MW_INSTALL_PATH' ) : __DIR__ . '/../../..';
 require_once $basePath . '/maintenance/Maintenance.php';
 
 
@@ -42,6 +42,8 @@ class SemanticMeetingMinutesImportExtensionPages extends Maintenance {
 
  	// initiates or updates extensions
 	public function execute() {
+
+		global $egSmmPageFilePath;
 
 		$dryRun = $this->hasOption( 'dry-run' );
 		$pages = json_decode( file_get_contents( __DIR__ . "/pages.json" ) );
@@ -60,10 +62,13 @@ class SemanticMeetingMinutesImportExtensionPages extends Maintenance {
 					// @todo: show diff?
 				}
 				else {
+					// echo "\n\n$filePageContent\n\n";
+					// echo "\n\n$egSmmPageFilePath/$filePath\n\n";
+
 					echo "$pageTitleText changed.\n";
 					$wikiPage->doEditContent(
 						new WikitextContent( $filePageContent ),
-						"Updated with content from Extension:SemanticMeetingMinutes version " . SEMANTIC_MEETING_MINUTES_VERSION,
+						"Updated with content from Extension:SemanticMeetingMinutes version " . SEMANTIC_MEETING_MINUTES_VERSION
 					);
 				}
 			}
@@ -74,7 +79,6 @@ class SemanticMeetingMinutesImportExtensionPages extends Maintenance {
 
 
 		$this->output( "\n## Finished retrieving Semantic Meeting Minutes pages.\n" );
-		$this->showErrors();
 		$this->output( "\n" );
 	}
 

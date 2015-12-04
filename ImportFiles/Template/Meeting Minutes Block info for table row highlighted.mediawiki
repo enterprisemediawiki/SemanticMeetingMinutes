@@ -1,0 +1,16 @@
+<noinclude>
+<pre>
+{{{1|}}} = Meeting page title (i.e. {{PAGENAME}} for meeting)
+{{{2|}}} = Meeting type (Tools Panel, FIAR Call, etc...not full name of page like "EVA Tools Panel - 23 August 2012")
+{{{3|}}} = Meeting date
+</pre>
+</noinclude><includeonly><tr><td><table class="main-page-meeting-minutes-row highlighted-row-light-yellow" style="width:100%;padding:5px;border:1px solid #cccccc;margin:10px 0px 0px 0px;"><tr><th>'''[[{{{1|}}}|{{{2|}}}]]''' (Today)</th></tr>
+<tr><td>{{#ask: [[Has topic title::+]][[From page::{{{1|}}}]]
+|mainlabel=-
+|? Has topic title
+|? Synopsis
+|? From page
+|link=none
+|format = template
+|template = Meeting topic and synopsis bullet
+}}</td></tr></table></td></tr></includeonly>
