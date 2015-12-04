@@ -17,7 +17,7 @@ Open a terminal window, and change directory to your wiki. Then run the followin
     php composer.phar require mediawiki/semantic-meeting-minutes ~0.3
 
 ### Step 1.1: Enable Semantic MediaWiki
- 
+
 If you didn't previously have Semantic MediaWiki installed (the Composer command above will install it if you did't have it already) make sure to add the following to LocalSettings.php:
 
 ```php
@@ -48,20 +48,42 @@ require_once "$IP/extensions/SemanticForms/SemanticForms.php";
 
 ### Step 3: Import forms, templates, categories and properties
 
-SMM comes with many pre-built forms, templates, categories and properties. To create these on your wiki, use the importDump.php script from your wiki's install directory. After importing the pages make sure to rebuild your recent changes.
+SMM comes with many pre-built forms, templates, categories and properties. To create these on your wiki, use the importDump.php script from your wiki's install directory..
 
-    php maintenance/importDump.php < ./extensions/SemanticMeetingMinutes/ImportFiles/import.xml
-    php maintenance/rebuildrecentchanges.php
+    php ./extensions/SemanticMeetingMinutes/ImportFiles/importExtensionPages.php
 
 ### Step 4: Verify imported pages did not overwrite existing ones
 
 It is possible that the SMM pages you imported in step 3 could have overwritten existing pages with the same names. Go to your Recent Changes page and review the changes that were made.
-	
+
 ### Step 5: Optional steps
 
 It is highly recommended that you add the Semantic Meeting Minutes form to your _Mediawiki:Sidebar_ page and add the following link:
 
     Special:FormEdit/Meeting Minutes|Meeting Minutes
+
+Also, to get a footer on each page marked as a "related article" in meeting minutes, add the following to the `[[Mediawiki:Hf-nsfooter-]]` page:
+
+```
+__NOTOC__<br style="clear:both;" />{{#ask: [[Has topic title::+]][[Related article::{{PAGENAME}}]]
+|mainlabel=-
+|? From page
+|? Has date
+|? Has topic title
+|? Synopsis
+|? Related article
+|link = none
+|format = template
+|template = Meeting references row
+|intro = <h1>Meeting References</h1>
+|offset = 0
+|limit = 10
+|sort = Has date
+|order = desc
+|searchlabel = <br /><br /><br />Click to browse earlier meeting references
+}}
+<headertabs />
+```
 
 
 [composer]: https://getcomposer.org/
