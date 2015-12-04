@@ -1,0 +1,40 @@
+<noinclude>This template allows you to modify how a TOC looks on a page.
+
+== Basic Usage ==
+Doing the following will put the TOC into the page wherever you place this code. So you can specify above or below certain text.
+<pre>
+{{TOC}}
+</pre>
+
+== Making a Right-Aligned TOC ==
+<pre>
+{{TOC | align=right }}
+</pre>
+
+Depending on the stuff you have on the page, you may also want to do:
+<pre>
+{{TOC | align=right | clear=right }}
+</pre>
+
+== Limit TOC so it shows only certain headings ==
+Show only "level 2" headings:
+<pre>
+{{TOC | limit=2 }}
+</pre>
+
+Show only "level 2" and "level 3" headings:
+<pre>
+{{TOC | limit=3 }}
+</pre>
+
+== All Options ==
+<pre>
+{{TOC
+|clear= <!-- right or left,  -->
+|width= <!-- example: 300px -->
+|align= <!-- right or left -->
+|limit= <!-- which size headers to allow, e.g. 2,3,4,5 ... -->
+}}
+</pre>
+
+</noinclude><includeonly><div style="clear: {{{clear|both}}}; margin-bottom: .5em; float: {{{align|none}}}; {{#ifeq: {{lc:{{{align|}}}}} | right | margin-left:2.5em; | {{#ifeq: {{lc:{{{align|}}}}} | left | margin-right:2.5em; | <!-- align=none --> }} }} width: {{{width|auto}}};" {{#if:{{{limit|}}}|class="toclimit-{{{limit|}}}"}}>__TOC__</div></includeonly>
