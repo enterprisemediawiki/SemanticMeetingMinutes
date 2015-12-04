@@ -70,7 +70,7 @@ class SemanticMeetingMinutesGetExtensionPagesText extends Maintenance {
 				}
 				else {
 					echo "$pageTitleText changed.\n";
-					file_put_contents( "$egSmmPageFilePath/$filePath" , $wikiPageContent );
+					file_put_contents( "$egSmmPageFilePath/$filePath" , $wikiPageText );
 				}
 			}
 			else {
