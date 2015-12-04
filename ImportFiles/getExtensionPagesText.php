@@ -44,33 +44,32 @@ class SemanticMeetingMinutesGetExtensionPagesText extends Maintenance {
  	// initiates or updates extensions
 	public function execute() {
 
+		global $egSmmPageFilePath;
+
 		$dryRun = $this->hasOption( 'dry-run' );
 		$pageGroups = json_decode( file_get_contents( __DIR__ . "/pages.json" ) );
 
-		foreach( $pageGroups as $namespace => $pages ) {
-			foreach( $pages as $page ) {
-				$wikiPageContent = WikiPage::factory( Title::newFromText( "$namespace:$page" ) )->getContent();
-				$filePageContent = file_get_contents( __DIR__ . "/$namespace/$page" );
+		foreach( $pages as $pageTitleText => $filePath ) {
+			$wikiPageContent = WikiPage::factory( Title::newFromText( $pageTitleText ) )->getContent();
+			$filePageContent = file_get_contents( "$egSmmPageFilePath/$filePath" );
 
-				if ( $filePageContent !== $wikiPageContent ) {
+			if ( $filePageContent !== $wikiPageContent ) {
 
-					if ( $dryRun ) {
-						echo "$namespace:$page would be changed.\n";
-						// @todo: show diff?
-					}
-					else {
-						echo "$namespace:$page changed.\n";
-						file_put_contents( __DIR__ . "$namespace/$page" , $wikiPageContent );
-					}
+				if ( $dryRun ) {
+					echo "$pageTitleText would be changed.\n";
+					// @todo: show diff?
 				}
 				else {
-					echo "No change for $namespace:$page\n";
+					echo "$pageTitleText changed.\n";
+					file_put_contents( "$egSmmPageFilePath/$filePath" , $wikiPageContent );
 				}
+			}
+			else {
+				echo "No change for $pageTitleText\n";
 			}
 		}
 
 		$this->output( "\n## Finished retrieving Semantic Meeting Minutes pages.\n" );
-		$this->showErrors();
 		$this->output( "\n" );
 	}
 

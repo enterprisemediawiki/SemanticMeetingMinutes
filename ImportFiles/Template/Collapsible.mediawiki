@@ -1,0 +1,108 @@
+<noinclude>This template creates a content field which can be shown/hidden by the click of a button.
+
+== Use the following form  ==
+<pre>
+{{Collapsible
+  | Content = 
+  | Collapse text = (default = Collapse)
+  | Expand text = (default = Expand)
+  | Start hidden = (true or false, default = false)
+  | Class = (class applied to the outermost <div>)
+  | Before trigger = (text, html, wiki syntax to go before trigger; default = blank)
+  | After trigger = (text, html, wiki syntax to go after trigger but before content; default = blank)
+}}
+</pre>
+
+
+== Example 1 ==
+=== Code ===
+<pre>
+{{Collapsible
+  | Content = 
+* Line one
+* Line 2
+* Line C
+* Line IV
+  | Collapse text = Collapse This
+  | Expand text = 
+  | Start hidden = true
+  | Class = 
+  | Before trigger = Click here to:&amp;nbsp;
+  | After trigger = !
+}}
+</pre>
+=== Result ===
+{{Collapsible
+  | Content = 
+* Line one
+* Line 2
+* Line C
+* Line IV
+  | Collapse text = Collapse This
+  | Expand text = 
+  | Start hidden = true
+  | Class = 
+  | Before trigger = Click here to:&nbsp;
+  | After trigger = !
+}}
+
+Note: If you want a space between the colon in "Click here to:" and the expand/collapse button, you need to add a special character. Just typing a regular space (hitting the space bar) will not work, as MediaWiki will ignore this white space. Instead you need to add a [http://en.wikipedia.org/wiki/Non-breaking_space Non-breaking space], by typing <code>&amp;nbsp;</code> after the colon.
+
+== Example 2 ==
+=== Code ===
+<pre>
+{{Collapsible
+  | Content = 
+* Line one
+* Line 2
+* Line C
+* Line IV
+  | Collapse text = Hide
+  | Expand text = Show
+  | Start hidden = 
+  | Class = 
+  | Before trigger =  
+  | After trigger = 
+}}
+</pre>
+=== Result ===
+{{Collapsible
+  | Content = 
+* Line one
+* Line 2
+* Line C
+* Line IV
+  | Collapse text = Hide
+  | Expand text = Show
+  | Start hidden = 
+  | Class = 
+  | Before trigger =  
+  | After trigger = 
+}}
+</noinclude><includeonly><!--
+
+
+    Create the initial "wrapper" <div>
+        * Add optional Class
+        * If content should initially be hidden add the smm-collapsed class
+        * Add the text that should be used for the expand and collapse triggers
+
+--><div class="smm-collapsible {{{Class|}}} {{#ifeq: {{{Start hidden}}} | true | smm-collapsed | }}" data-collapsetext="{{#if: {{{Collapse text|}}} | {{{Collapse text|}}} | Collapse}}" data-expandtext="{{#if: {{{Expand text|}}} | {{{Expand text|}}} | Expand}}"><!--
+
+
+    Optionally create elements that will go before and after the trigger
+        * Trigger = the "link" which will expand/collapse the content
+        * The trigger will be added via javascript in common.js
+        * Wrap Before trigger and After trigger in <span> tags for common.js and common.css to access them
+
+-->{{#if: {{{Before trigger|}}} | <span class="pre-trigger">{{{Before trigger|}}}</span> | }}{{#if: {{{After trigger|}}} | <span class="post-trigger">{{{After trigger|}}}</span> | }}<!--
+
+
+    Create content element and close out "wrapper" <div>
+        * If no "Content" parameter, use first parameter
+
+--><div class="smm-collapsible-content">{{#if: {{{Content|}}} |&nbsp;
+{{{Content|}}} |&nbsp;
+{{{1}}} }}</div></div><!--
+
+--></includeonly>

@@ -1,0 +1,1 @@
+This property is of type [[Has type::Date]]. It is used by the [http://www.mediawiki.org/wiki/Extension:Semantic_Internal_Objects Semantic Internal Object] defined by [[Template:Subject significant to subject]]. It is also used by [[Template:Crew involved with subject]] and [[Template:Person involved with subject]].
