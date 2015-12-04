@@ -26,7 +26,7 @@
 
 // @todo: does this always work if extensions are not in $IP/extensions ??
 // this was what was done by SMW
-$basePath = getenv( 'MW_INSTALL_PATH' ) !== false ? getenv( 'MW_INSTALL_PATH' ) : __DIR__ . '/../..';
+$basePath = getenv( 'MW_INSTALL_PATH' ) !== false ? getenv( 'MW_INSTALL_PATH' ) : __DIR__ . '/../../..';
 require_once $basePath . '/maintenance/Maintenance.php';
 
 
@@ -47,13 +47,22 @@ class SemanticMeetingMinutesGetExtensionPagesText extends Maintenance {
 		global $egSmmPageFilePath;
 
 		$dryRun = $this->hasOption( 'dry-run' );
-		$pageGroups = json_decode( file_get_contents( __DIR__ . "/pages.json" ) );
+		$pages = json_decode( file_get_contents( __DIR__ . "/pages.json" ) );
 
 		foreach( $pages as $pageTitleText => $filePath ) {
-			$wikiPageContent = WikiPage::factory( Title::newFromText( $pageTitleText ) )->getContent();
+
+			$wikiPage = WikiPage::factory( Title::newFromText( $pageTitleText ) );
+			$wikiPageContent = $wikiPage->getContent();
+			if ( $wikiPageContent ) {
+				$wikiPageText = $wikiPageContent->getNativeData();
+			}
+			else {
+				$wikiPageText = '';
+			}
+
 			$filePageContent = file_get_contents( "$egSmmPageFilePath/$filePath" );
 
-			if ( $filePageContent !== $wikiPageContent ) {
+			if ( trim( $filePageContent ) !== trim( $wikiPageText )  ) {
 
 				if ( $dryRun ) {
 					echo "$pageTitleText would be changed.\n";
