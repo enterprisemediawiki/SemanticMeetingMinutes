@@ -10,6 +10,11 @@
 	"Template:Meeting Minutes/Files": "Template/Meeting Minutes Files.mediawiki",
 	"Template:Collapsible": "Template/Collapsible.mediawiki",
 	"Template:TOC": "Template/TOC.mediawiki",
+	"Template:Meeting Minutes/Table of Recent": "Template/Meeting Minutes--Table of Recent.mediawiki",
+	"Template:Meeting info for table row": "Template/Meeting info for table row.mediawiki",
+	"Template:Meeting info for table row highlighted": "Template/Meeting info for table row highlighted.mediawiki",
+	"Template:Meeting topic and synopsis bullet": "Template/Meeting topic and synopsis bullet.mediawiki",
+	"Template:Meeting Minutes/Related Articles Block": "Template/Meeting Minutes--Related Articles Block.mediawiki",
 
 	"Category:Meeting": "Category/Meeting.mediawiki",
 	"Category:Meeting Minutes": "Category/Meeting Minutes.mediawiki",

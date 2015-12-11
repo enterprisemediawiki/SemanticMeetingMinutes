@@ -1,0 +1,14 @@
+<noinclude>
+<pre>
+{{{1|}}} = Meeting page title (i.e. {{PAGENAME}} for meeting)
+{{{2|}}} = Meeting type (Tools Panel, FIAR Call, etc...not full name of page like "EVA Tools Panel - 23 August 2012")
+{{{3|}}} = Meeting date
+</pre>
+</noinclude><includeonly><tr><td nowrap="nowrap">'''[[{{{1|}}}|{{{2|}}}]]'''</td><td nowrap="nowrap">{{{3|}}}</td><td>
+{{#ask: [[Topic from meeting::+]][[From page::{{{1|}}}]]
+|mainlabel=-
+|? Has topic title
+|? Synopsis
+|format = template
+|template = Meeting topic and synopsis bullet
+}}</td></tr></includeonly>

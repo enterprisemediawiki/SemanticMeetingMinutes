@@ -1,0 +1,18 @@
+<includeonly>{{#masonry-block: title =Related Articles Tagged in Recent Meeting Minutes
+ | width = 2
+ | color = yellow
+ | body  = <div style="width:590px;height:250px;position:relative;">{{#ask: [[Topic from meeting::+]] [[Has date::< {{#time: d F Y }} ]] [[Has date::> {{#time: d F Y | -30 days}} ]]
+|?Related article
+| format=tagcloud
+| widget=wordcloud
+| width=589
+| height=250
+| minsize=130
+| maxsize=500
+| template=Return alias
+}}
+</div>
+}}</includeonly><noinclude>
+
+This block uses the tagcloud/wordcloud Semantic Results Format to show which Related articles have been tagged in Meeting Minutes in the past 30 days.
+</noinclude>
