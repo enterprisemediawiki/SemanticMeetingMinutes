@@ -40,7 +40,13 @@ $GLOBALS['wgAutoloadClasses']['MeetingMinutes\Setup'] = __DIR__ . '/Setup.php';
 $GLOBALS['wgHooks']['ParserFirstCallInit'][] = 'MeetingMinutes\Setup::setupParserFunctions';
 $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'MeetingMinutes\Setup::onBeforePageDisplay';
 
-$GLOBALS['egSmmPageFilePath'] = __DIR__ . "/ImportFiles";
+// Dependency: Extension:PageImporter.
+PageImporter::registerPageList(
+	"SemanticMeetingMinutes",
+	__DIR__ . "/ImportFiles/pages.json",
+	__DIR__ . "/ImportFiles",
+	"Updated with content from Extension:SemanticMeetingMinutes version " . SEMANTIC_MEETING_MINUTES_VERSION
+);
 
 $ExtensionMeetingMinutesResourceTemplate = array(
 	'localBasePath' => __DIR__ . '/modules',
