@@ -59,6 +59,9 @@
 ! Call-in password
 | {{#if: {{{Call-in password|}}} | [[Call in password::{{{Call-in password|}}}]] | }}
 |-
+! Standard group representative(s)
+| {{#arraymap:{{{Standard group representative(s)|}}}|,|x|[[Standard group representative::x]]}}
+|-
 ! Managed by cadre(s)
 | {{#arraymap:{{{Managed by cadre(s)|}}}|,|x|[[Managed by cadre::x]]}}
 |-

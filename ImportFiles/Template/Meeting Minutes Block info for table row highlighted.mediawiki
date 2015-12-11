@@ -10,6 +10,7 @@
 |? Has topic title
 |? Synopsis
 |? From page
+|sort=Index
 |link=none
 |format = template
 |template = Meeting topic and synopsis bullet

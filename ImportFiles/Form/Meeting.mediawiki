@@ -31,6 +31,9 @@ if a page with that name already exists, you will be sent to a form to edit that
 ! Call-in password:
 | {{{field|Call-in password|input type=text}}}
 |-
+! Standard group representative(s):
+| {{{field|Standard group representative(s)}}}
+|-
 ! Managed by cadre(s):
 | {{{field|Managed by cadre(s)|input type=text}}}
 |-
