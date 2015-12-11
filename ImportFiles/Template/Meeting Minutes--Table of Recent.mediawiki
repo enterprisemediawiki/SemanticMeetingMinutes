@@ -1,0 +1,52 @@
+<h2 id="mp-itn-h2" style="margin:20px 0 -7px 0; background:#cedff2; font-size:120%; font-weight:bold; border:1px solid #a3b0bf; text-align:left; color:#000; padding:0.2em 0.4em;">All Meeting Minutes ([[Special:FormEdit/Meeting Minutes|add minutes]])</h2><!--
+
+         Meetings after today (future ... in the year 2000)
+
+--><table class="wikitable smwtable" style="width:100%;"><tr><th>Meeting</th><th>Date</th><th>Topics</th></tr>{{#ask: [[Category:Meeting Minutes]] [[Meeting date::>> {{#time: d F Y }} ]] 
+| ?Meeting type = Type
+| ?Meeting date = Date
+| sort = Meeting date, Start time
+| order = desc
+| limit = 1000
+| link = none
+| default = 
+| intro = 
+| outro = 
+| format = template
+| template = Meeting info for table row
+| searchlabel = 
+}}<!--
+
+         Meetings today (present)
+
+-->{{#ask: [[Category:Meeting Minutes]] [[Meeting date:: {{#time: d F Y }} ]]
+| ?Meeting type = Type
+| ?Meeting date = Date
+| sort = Meeting date, Start time
+| order = desc
+| limit = 1000
+| link = none
+| default = 
+| intro = 
+| outro = 
+| format = template
+| template = Meeting info for table row highlighted
+| searchlabel = 
+}}<!--
+
+         Meetings before today (past)
+
+-->{{#ask: [[Category:Meeting Minutes]] [[Meeting date::<< {{#time: d F Y }} ]]
+| ?Meeting type = Type
+| ?Meeting date = Date
+| sort = Meeting date, Start time
+| order = desc
+| limit = 100
+| link = none
+| default = 
+| intro = 
+| outro = 
+| format = template
+| template = Meeting info for table row
+| searchlabel = Older minutes
+}}</table>

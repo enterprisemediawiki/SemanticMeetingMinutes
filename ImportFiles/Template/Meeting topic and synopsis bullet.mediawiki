@@ -1,0 +1,8 @@
+<noinclude>
+<pre>
+{{{1|}}} = topic title
+{{{2|}}} = synopsis
+{{{3|}}} = From page
+</pre>
+</noinclude><includeonly>* '''{{{1|}}}:''' {{{2|}}} {{#ifeq:{{Ends with|{{{2|}}}|...}}|true|<small>'''''[[{{{3|}}}|more]]'''''</small>|}}
+</includeonly>
