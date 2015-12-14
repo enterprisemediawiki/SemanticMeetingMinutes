@@ -43,7 +43,7 @@ $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'MeetingMinutes\Setup::onBeforePage
 // Dependency: Extension:PageImporter.
 PageImporter::registerPageList(
 	"SemanticMeetingMinutes",
-	__DIR__ . "/ImportFiles/pages.json",
+	__DIR__ . "/ImportFiles/pages.php",
 	__DIR__ . "/ImportFiles",
 	"Updated with content from Extension:SemanticMeetingMinutes version " . SEMANTIC_MEETING_MINUTES_VERSION
 );
