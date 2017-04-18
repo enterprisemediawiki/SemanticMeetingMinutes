@@ -19,13 +19,15 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 	die( 'MeetingMinutes extension' );
 }
 
+define( 'SEMANTIC_MEETING_MINUTES_VERSION', '0.4.0' );
+
 $GLOBALS['wgExtensionCredits']['semantic'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'Semantic Meeting Minutes',
 	'url'            => 'http://github.com/enterprisemediawiki/SemanticMeetingMinutes',
 	'author'         => 'James Montalvo',
 	'descriptionmsg' => 'meetingminutes-desc',
-	'version'        => '0.3.0'
+	'version'        => SEMANTIC_MEETING_MINUTES_VERSION
 );
 
 $GLOBALS['wgMessagesDirs']['MeetingMinutes'] = __DIR__ . '/i18n';
@@ -38,6 +40,7 @@ $GLOBALS['wgAutoloadClasses']['MeetingMinutes\Setup'] = __DIR__ . '/Setup.php';
 $GLOBALS['wgHooks']['ParserFirstCallInit'][] = 'MeetingMinutes\Setup::setupParserFunctions';
 $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'MeetingMinutes\Setup::onBeforePageDisplay';
 
+$GLOBALS['egSmmPageFilePath'] = __DIR__ . "/ImportFiles";
 
 $ExtensionMeetingMinutesResourceTemplate = array(
 	'localBasePath' => __DIR__ . '/modules',

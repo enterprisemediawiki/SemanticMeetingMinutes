@@ -1,0 +1,49 @@
+<includeonly><!--
+
+
+#
+# (1) Create subobject of meeting topic data
+#
+-->{{#subobject:
+|From page={{FULLPAGENAME}}
+|Has date={{#var:meetingDate}}
+|Has topic title={{{Has topic title|}}}
+|Synopsis={{#synopsize: {{{Full text|}}} | 500 | 1 }}
+|Related article={{{Related article|}}}|+sep=,
+|Index={{#counter:}}
+}}<!--
+
+
+#
+# Display topic info: header, related articles, and full text
+#
+--><h2>{{{Has topic title|}}}</h2>
+<small>'''Related Article(s):''' {{#arraymap:{{{Related article|}}}|,|x|[[x]]}}</small>
+
+{{{Full text|}}}
+
+
+<!-- leave space after full text
+
+
+
+#
+# (3) Template definition complete. Show template documentation. 
+#
+--></includeonly><noinclude>
+This is the "Topic from meeting" template. It should be created using the [[Form:Meeting Minutes]].
+
+If edited manually, it should be called in the following format:
+<pre>
+{{Topic from meeting
+|From page=
+|Has date=
+|Full text=
+|Related article(s)=
+|Index=
+|Uploaded files=
+|External links=
+}}
+</pre>
+Edit the page to see the template text.
+</noinclude>

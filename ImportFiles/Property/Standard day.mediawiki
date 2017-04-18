@@ -1,0 +1,10 @@
+This is a property of type [[Has type::String]].
+
+The allowed values for this property are:
+* [[Allows value::Monday]]
+* [[Allows value::Tuesday]]
+* [[Allows value::Wednesday]]
+* [[Allows value::Thursday]]
+* [[Allows value::Friday]]
+* [[Allows value::Saturday]]
+* [[Allows value::Sunday]]
