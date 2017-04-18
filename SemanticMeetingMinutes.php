@@ -1,8 +1,8 @@
 <?php
-/** 
+/**
  * The MeetingMinutes extension provides JS and CSS to enable recording meeting
  * minutes in SMW. See README.md.
- * 
+ *
  * Documentation: https://github.com/enterprisemediawiki/SemanticMeetingMinutes
  * Support:       https://github.com/enterprisemediawiki/SemanticMeetingMinutes
  * Source code:   https://github.com/enterprisemediawiki/SemanticMeetingMinutes
@@ -41,7 +41,7 @@ $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'MeetingMinutes\Setup::onBeforePage
 
 $ExtensionMeetingMinutesResourceTemplate = array(
 	'localBasePath' => __DIR__ . '/modules',
-	'remoteExtPath' => 'MeetingMinutes/modules',
+	'remoteExtPath' => 'SemanticMeetingMinutes/modules',
 );
 
 // check pcre.backtrack_limit to be large enough; set to 10 million if not
