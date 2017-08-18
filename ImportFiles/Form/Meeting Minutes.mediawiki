@@ -10,7 +10,7 @@ Main Form Definition
 <h3>Remember...</h3>
 '''[[Help:Save Often|Save often or use a text editor]]'''. Revisions are free. 
 
-[[File:Tutorial.png|link={{filepath:Meeting Minutes Tutorial.swf}}|220px]]
+[[File:Tutorial.png|link=https://fod2.jsc.nasa.gov/CA/CA7/OnLineLessons/NEW_FORMAT/MediaWiki/MeetingMinutes/presentation_html5.html|220px]]
 </div>
 
 <h2>Meeting Details</h2>
@@ -78,7 +78,7 @@ Main Form Definition
 
 -->{{{for template|Meeting Minutes/Files|multiple|embed in field=Meeting minutes[Meeting files]|add button text=Add File}}}
 <div class="mti-help-box mti-hide-on-blur">
-Local files must be uploaded first. See [[Help:Meeting Minutes|the help page]] for more info.
+Local files must be uploaded first. See [[FOD:Help:Meeting Minutes|the help page]] for more info.
 </div>
 {| class="formtable meeting-minutes-formtable"
 ! Local File Name or URL

@@ -2,7 +2,7 @@
 
          Meetings after today (future ... in the year 2000)
 
--->__NOTOC__<table class="main-page-meeting-minutes-box main-page-meeting-minutes-box-yellow" style="width:100%;"><tr><th style="padding-top:10px; padding-bottom: 10px;">Meeting Minutes</th></tr><tr><td><table><tr><td style="width:100%;margin:5px 0px 0px 0px;">[[Special:FormEdit/Meeting Minutes|+ Add minutes]]</td></tr>
+-->__NOTOC__<table class="main-page-meeting-minutes-box main-page-meeting-minutes-box-yellow" style="width:100%;"><tr><th style="padding-top:10px; padding-bottom: 10px;">Meeting Minutes</th></tr><tr><td><table><tr style="vertical-align: bottom;"><td style="width:100%;margin:5px 0px 0px 0px;">[[File:Add Minutes.png|link=Special:FormEdit/Meeting Minutes|155px|center]]</td></tr>
 {{#ask: [[Category:Meeting Minutes]] [[Meeting date::>> {{#time: d F Y }} ]] [[Meeting date::< {{#time: d F Y | +370 days}} ]]
 | ?Meeting type = Type
 | ?Meeting date = Date
