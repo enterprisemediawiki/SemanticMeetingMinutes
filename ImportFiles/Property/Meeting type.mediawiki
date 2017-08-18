@@ -1,1 +1,1 @@
-This is a property of type [[Has type::Page]]. It links to pages that use the form [[Has default form::Meeting]].
+This is a property of type [[Has type::Page]]. It links to pages that use the form {{#default_form:Meeting}}.

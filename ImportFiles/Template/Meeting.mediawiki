@@ -83,6 +83,7 @@
 | order = desc
 | limit = 15
 | format = template
+| valuesep = ,
 | template = Meeting/Recent Meetings
 | default = No meetings of this type have been added
 | searchlabel = <br />see prior meetings
