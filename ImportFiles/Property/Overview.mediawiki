@@ -1,1 +1,6 @@
-This is a property of type [[Has type::Text]].
+{{Property
+ |type = Text
+ |inTemplates = 
+ |description = Intended for any page to include basic overview info about the page.
+ |values=N
+}}

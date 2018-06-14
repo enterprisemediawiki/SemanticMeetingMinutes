@@ -1,1 +1,7 @@
-This property has type [[Has type::Number]] and is intended to be used to state the intended order of a Multiple Instance Template.
+{{Property
+ |type = Number
+ |inTemplates = 
+ |description = intended to be used to state the intended order of a Multiple Instance Template.
+ |values=N
+}}
+[[Category:Property Used for Summary Timeline Extension]]

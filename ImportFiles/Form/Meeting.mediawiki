@@ -1,14 +1,20 @@
 <noinclude>
-This is the "Meeting" form.
-To create a page with this form, enter the page name below;
-if a page with that name already exists, you will be sent to a form to edit that page.
+This is the meeting form, not to be confused with the Meeting Minutes form. This form creates/edits pages which outline meeting types.
 
-
-{{#forminput:form=Meeting}}
-
+{{Button|TITLE=Add Meeting Page|LINK=Special:FormEdit/Meeting}}
+{{Form
+|HAS TEMPLATES=
+|DESCRIPTION=Creates/edits Meeting pages which supplies details on that specific type of meeting.
+|CLASS=
+|HIGH USE=
+|FORM DEFINES NAME=
+}}
 </noinclude><includeonly>{{{info|page name=<Meeting[Meeting title]>}}}
 <div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
 {{{for template|Meeting}}}
+<div style="background-color: #ffffff; padding:15px; border:5px solid #f2f2f2;">
+<p style="padding:5px; border-left: 10px solid #33ccff; background-color: #e6f9ff;"><font size="5">'''Infobox'''</font></p>
+''Data entered into this section of the form will appear in the page's infobox. All of this data can be queried to other pages.'' 
 {| class="formtable"
 ! Meeting Title:
 | {{{field|Meeting title|mandatory|input type=text}}}
@@ -17,7 +23,7 @@ if a page with that name already exists, you will be sent to a form to edit that
 | {{{field|Standard day}}}
 |-
 ! Standard time:
-| {{{field|Standard time|input type=text}}} (format = 09:00, 24-hour time, please)
+| {{{field|Standard time|input type=text|placeholder=HH:MM}}} (format = 09:00, 24-hour time, please)
 |-
 ! Building:
 | {{{field|Building|input type=text}}}
@@ -32,21 +38,34 @@ if a page with that name already exists, you will be sent to a form to edit that
 | {{{field|Call-in password|input type=text}}}
 |-
 ! Standard group representative(s):
-| {{{field|Standard group representative(s)}}}
+| {{{field|Standard group representative(s)|input type=textarea with autocomplete|values from category=Person}}}
 |-
-! Managed by cadre(s):
+! Managed by:
 | {{{field|Managed by cadre(s)|input type=text}}}
 |-
 ! Notable attendee(s):
-| {{{field|Notable attendee(s)|input type=textarea with autocomplete|values from category=Person}}}
+| {{{field|Notable attendee(s)|input type=tokenizes|values from category=Person}}}
 |}
-'''Overview:''' {{{field|Overview|autogrow|input type=textarea}}}
+
+''<font style="color:red;">*</font> Denotes mandatory field.''
+</div>
+<div style="background-color: #ffffff; padding:15px; border:5px solid #f2f2f2;">
+<p style="padding:5px; border-left: 10px solid 	#33ccff; background-color: #e6f9ff;"><font size="5">'''Overview'''</font></p>
+''Use this form section to add any additional page information that was not included in the form sections above. Text in this section '''cannot''' be queried to other pages, however, this text can be edited using the Visual Editor.''
+{{{field|Overview|input type=textarea}}}
+</div>
+<div style="background-color: #ffffff; padding:15px; border:5px solid #f2f2f2;">
+<p style="padding:5px; border-left: 10px solid 	#33ccff; background-color: #e6f9ff;"><font size="5">'''Upcoming Topics'''</font></p>
+''Use this form section to add any additional page information that was not included in the form sections above. Text in this section '''cannot''' be queried to other pages, however, this text can be edited using the Visual Editor.''
+{{{field|UPCOMING TOPICS|input type=textarea|placeholder=Leave this blank if you don't have any upcoming topics}}}
+</div>
 {{{end template}}}
 
-'''Free text:'''
-
-{{{standard input|free text|autogrow|rows=10}}}
-
+<div style="background-color: #ffffff; padding:15px; border:5px solid #f2f2f2;">
+<p style="padding:5px; border-left: 10px solid 	#33ff33; background-color: #e5ffe5;"><font size="5">'''Free Text'''</font></p>
+''Use this form section to add any additional page information that was not included in the form sections above. Text in this section '''cannot''' be queried to other pages, however, this text can be edited using the Visual Editor.''
+{{{standard input|free text|editor|rows=20}}}
+</div>
 
 {{{standard input|summary}}}
 

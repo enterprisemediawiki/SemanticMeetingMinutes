@@ -1,1 +1,8 @@
-This is a property of type [[Has type::Page]].
+{{Property
+ |type = Page
+ |inTemplates =
+ |description =names a building on JSC campus 
+ |values=Y
+ |series=
+ |instruction=
+}}

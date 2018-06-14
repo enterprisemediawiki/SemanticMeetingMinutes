@@ -44,6 +44,9 @@
 ! Meeting type
 | [[Meeting type::{{{Meeting type|}}}]]
 |-
+! Note-taking group
+| {{#arraymap:{{{Meeting group|}}}|,|VAR|[[Meeting group::VAR]]|, }}
+|-
 ! Meeting date
 | [[Meeting date::{{{Meeting date|}}}]] {{#vardefine:meetingDate|{{{Meeting date|}}} }}
 |-
@@ -52,6 +55,9 @@
 |-
 ! Notes taken by
 | {{#arraymap:{{{Notes taken by|}}}|,|x|[[Notes taken by::x]]}}
+|-
+! Attendee(s)
+| {{#arraymap:{{{Notable attendee(s)|}}}|,|x|[[Notable attendee::x]]|<br/>}}
 |-
 ! style="text-align: center; background-color:#ccccff;" colspan="2" |<big>Meeting Documents</big>
 |-
@@ -98,6 +104,7 @@ If edited manually, it should be called in the following format:
 |Start time minute=
 |Notes taken by=
 |Topics= <insert instances of [[Template:Topic from Meeting]] here>
+|Attendee(s)
 }}
 </pre>
 

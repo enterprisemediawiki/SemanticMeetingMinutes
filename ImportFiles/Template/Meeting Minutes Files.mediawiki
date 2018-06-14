@@ -1,1 +1,1 @@
-* {{File link | file={{{File or URL|}}} | alt={{{Alternate name|}}} }}<br />
+* {{File link | file={{#replace:{{{File or URL|}}}| |_}} | alt={{{Alternate name|}}} }}<br />

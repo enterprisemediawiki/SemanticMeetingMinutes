@@ -8,3 +8,4 @@ The allowed values for this property are:
 * [[Allows value::Friday]]
 * [[Allows value::Saturday]]
 * [[Allows value::Sunday]]
+* [[Allows value::Varies]]

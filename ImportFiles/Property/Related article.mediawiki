@@ -1,1 +1,6 @@
-This is a property of type [[Has type::Page]].
+{{Property
+|type=Page
+|inTemplates= Template:Imported KB, Template:Meeting minutes
+|description= Pages related to this page
+}}
+[[Category:Property Used for Summary Timeline Extension]]

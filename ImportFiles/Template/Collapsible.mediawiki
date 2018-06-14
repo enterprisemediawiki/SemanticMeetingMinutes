@@ -79,15 +79,31 @@ Note: If you want a space between the colon in "Click here to:" and the expand/c
   | Before trigger =  
   | After trigger = 
 }}
-</noinclude><includeonly><!--
+
+<!--
+== Using Templates In Forms ==
+Note that it doesn't appear that templates can be used when CREATING forms (that is, when actually building the forms). In that case, use the following HTML format:
+<pre>
+<div class="montalvo-collapsible mw-collapsed" data-collapsetext="COLLAPSE TEXT" data-expandtext="EXPAND TEXT">
+  <span class="pre-trigger">[</span><span class="post-trigger">]</span>
+  <div class="mw-collapsible-content">
+    CONTENT
+  </div>
+</div>
+</pre>
+* Only add mw-collapse if you want the content initially collapsed
+* span tags .pre-trigger and .post-trigger can be omitted as desired
+* It may work better to remove all the carriage-returns between elements shown above; they were added for clarity
+
+--></noinclude><includeonly><!--
 
 
     Create the initial "wrapper" <div>
         * Add optional Class
-        * If content should initially be hidden add the smm-collapsed class
+        * If content should initially be hidden add the mw-collapsed class
         * Add the text that should be used for the expand and collapse triggers
 
---><div class="smm-collapsible {{{Class|}}} {{#ifeq: {{{Start hidden}}} | true | smm-collapsed | }}" data-collapsetext="{{#if: {{{Collapse text|}}} | {{{Collapse text|}}} | Collapse}}" data-expandtext="{{#if: {{{Expand text|}}} | {{{Expand text|}}} | Expand}}"><!--
+--><div class="montalvo-collapsible {{{Class|}}} {{#ifeq: {{{Start hidden}}} | true | mw-collapsed | }}" data-collapsetext="{{#if: {{{Collapse text|}}} | {{{Collapse text|}}} | Collapse}}" data-expandtext="{{#if: {{{Expand text|}}} | {{{Expand text|}}} | Expand}}"><!--
 
 
     Optionally create elements that will go before and after the trigger
@@ -101,7 +117,7 @@ Note: If you want a space between the colon in "Click here to:" and the expand/c
     Create content element and close out "wrapper" <div>
         * If no "Content" parameter, use first parameter
 
---><div class="smm-collapsible-content">{{#if: {{{Content|}}} |&nbsp;
+--><div class="mw-collapsible-content">{{#if: {{{Content|}}} |&nbsp;
 {{{Content|}}} |&nbsp;
 {{{1}}} }}</div></div><!--
 
