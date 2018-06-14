@@ -1,7 +1,7 @@
 <includeonly>{{#masonry-block: title =Related Articles Tagged in Recent Meeting Minutes
  | width = 2
  | color = yellow
- | body  = <div style="width:590px;height:250px;position:relative;">{{#ask: [[Topic from meeting::+]] [[Has date::< {{#time: d F Y }} ]] [[Has date::> {{#time: d F Y | -30 days}} ]]
+ | body  = <div style="width:590px;height:250px;position:relative;">{{#ask: [[Has topic title::+]] [[Has date::< {{#time: d F Y }} ]] [[Has date::> {{#time: d F Y | -14 days}} ]]
 |?Related article
 | format=tagcloud
 | widget=wordcloud
@@ -10,6 +10,7 @@
 | minsize=130
 | maxsize=500
 | template=Return alias
+| limit=5000
 }}
 </div>
 }}</includeonly><noinclude>

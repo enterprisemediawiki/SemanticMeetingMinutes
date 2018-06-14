@@ -1,1 +1,6 @@
-This is a property of type [[Has type::String]].
+{{Property
+ |type = Text
+ |inTemplates = Template:Meeting
+ |description = Normal meeting start time
+ |values=N
+}}

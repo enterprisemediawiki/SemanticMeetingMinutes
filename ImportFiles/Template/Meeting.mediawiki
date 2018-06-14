@@ -1,13 +1,13 @@
-<includeonly><!--
+<noinclude>{{Documentation}}</noinclude><includeonly><!--
 # Template:Meeting
 #   (1) Setup JS/CSS and category
-#   (2) Add category
+#   (2) Add category, set properties
 #   (3) Create wrapper div around infobox and table of contents
-#   (4) Create infobox
-#   (5) Close out wrapper div
-#   (6) Show overview of meeting
-#   (7) #ask query for recent meetings
-#   (8) Show link to form
+#   (4) "add minutes"
+#   (5) Create infobox
+#   (6) Close out wrapper div
+#   (7) Show overview of meeting
+#   (8) #ask query for recent meetings
 #   (9) Template documentation (noinclude)
 
 
@@ -21,9 +21,22 @@
 
 
 #
-# (2) Add Category:Meeting Minutes.
+# (2) Add Category:Meeting Minutes, set properties
 #
 -->[[Category:Meeting]]<!--
+-->{{#set:
+ Overview = {{{Overview|}}}
+ |Standard day = {{{Standard day|}}}
+ |Standard time = {{{Standard time|}}}
+ |Building = {{{Building|}}}
+ |Room = {{{Room|}}}
+ |Call in number = {{{Call-in number|}}}]]
+ |Call in password = {{{Call-in password|}}}
+ |Managed by cadre = {{{Managed by cadre(s)|}}}|+sep=,
+ |Notable attendee = {{{Notable attendee(s)|}}}|+sep=,
+ |Has status box = {{{USES STATUS BOX|}}}
+ |Upcoming topics = {{{UPCOMING TOPICS|}}}
+}}<!--
 
 
 #
@@ -32,6 +45,20 @@
 #     be approximately the same size. FIXME: make them exactly the same size
 #
 --><div id="ext-meeting-minutes-toc-wrapper"><!--
+
+
+
+
+
+
+#
+# (4) "Add minutes" button
+#
+-->
+{{#formlink:form=Meeting Minutes|link text=<span class="template_button">Add Minutes</span>|query string=Meeting minutes[Meeting type]={{PAGENAME}} }}
+<!--
+
+
 
 
 #
@@ -73,7 +100,7 @@
 | colspan="2" | <!--
 
 #
-# (7) Perform #ask query to show recent meetings
+# Perform #ask query to show recent meetings
 #
 -->{{#ask: [[Category:Meeting Minutes]] [[Meeting type::{{PAGENAME}}]]
 | ?Meeting date = Date
@@ -83,6 +110,7 @@
 | order = desc
 | limit = 15
 | format = template
+| valuesep = ,
 | template = Meeting/Recent Meetings
 | default = No meetings of this type have been added
 | searchlabel = <br />see prior meetings
@@ -106,34 +134,25 @@
 #
 # (6) Show overview of meeting
 #
--->{{#if: {{{Overview|}}} | {{{Overview}}}{{#set: Overview ={{{Overview}}} }} | <!-- else do nothing --> }}<!--
+-->{{{Overview|}}}<!--
+
+
+#
+# (7) Display upcoming topics of future meetings
+#
+--><br><br>
+{{#if: {{{UPCOMING TOPICS|}}} | <div style="background-color: #e6f9ff; border:1px solid #f2f2f2; width:800px">
+<h3> Upcoming Topics</h3>
+</div>
+<div style="background-color: #ffffff; border:1px solid #f2f2f2; width:800px">
+
+{{{UPCOMING TOPICS|}}}
+</div> | }}
+<!--
 
 
 
 #
-# (8) Add link to meeting minutes form
+# (8) Template definition complete
 #
--->[[Special:FormEdit/Meeting Minutes|Add Meeting Minutes]]<!--
-
-
-
-#
-# (9) Template definition complete. Template documentation below (within noinclude).
-#
---></includeonly><noinclude>
-This is the "Meeting" template.
-It should be called in the following format:
-<pre>
-{{Meeting
-|Standard day=
-|Standard time=
-|Building=
-|Room=
-|Call-in number=
-|Call-in password=
-|Managed by cadre(s)=
-|Notable attendee(s)=
-}}
-</pre>
-Edit the page to see the template text.
-</noinclude>
+--></includeonly>

@@ -1,1 +1,8 @@
-This is a property of type [[Has type::String]].
+{{property
+ |type = Text
+ |inTemplates = template:Meeting
+ |description = the call in number for a meeting
+ |values=N
+ |series=
+ |instruction=
+}}

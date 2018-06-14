@@ -1,1 +1,6 @@
-This property is of type [[Has type::Date]]. It is potentially used in many places.
+{{Property
+ |type = Date
+ |inTemplates =
+ |description = It is used by the Semantic Internal Object defined by Template:Subject significant to subject.
+ |values=N
+}}

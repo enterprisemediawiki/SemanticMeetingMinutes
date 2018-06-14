@@ -10,6 +10,7 @@
 |Has topic title={{{Has topic title|}}}
 |Synopsis={{#synopsize: {{{Full text|}}} | 500 | 1 }}
 |Related article={{{Related article|}}}|+sep=,
+|Meeting topic text={{{Full text|}}}
 |Index={{#counter:}}
 }}<!--
 

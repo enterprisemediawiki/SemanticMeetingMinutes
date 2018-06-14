@@ -19,7 +19,7 @@ if ( ! defined( 'MEDIAWIKI' ) ) {
 	die( 'MeetingMinutes extension' );
 }
 
-define( 'SEMANTIC_MEETING_MINUTES_VERSION', '0.4.0' );
+define( 'SEMANTIC_MEETING_MINUTES_VERSION', '1.0.0' );
 
 $GLOBALS['wgExtensionCredits']['semantic'][] = array(
 	'path'           => __FILE__,

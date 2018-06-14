@@ -1,4 +1,13 @@
-<includeonly>__NOTOC__{{#meetingminutesform:}}{{{info|page name=<Meeting minutes[Meeting type]> - <Meeting minutes[Meeting date]>}}}
+<noinclude>
+{{Button|TITLE= Add Meeting Minutes|LINK= Special:FormEdit/Meeting_Minutes}}
+{{Form
+|HAS TEMPLATES=
+|DESCRIPTION=Used for creating and editing Meeting Minute pages.
+|CLASS=
+|HIGH USE=
+|FORM DEFINES NAME=
+}}
+</noinclude><includeonly>__NOTOC__{{#meetingminutesform:}}{{{info|page name=<Meeting minutes[Meeting type]> - <Meeting minutes[Meeting date]> (<Meeting minutes[Meeting group]>)}}}
 <div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
 {{{for template|Meeting minutes}}}<!--
 
@@ -8,9 +17,9 @@ Main Form Definition
 -->
 <div class="meeting-minutes-save-often">
 <h3>Remember...</h3>
-'''[[Help:Save Often|Save often or use a text editor]]'''. Revisions are free. 
+'''[[FOD:Save Often|Save often or use a text editor]]'''. Revisions are free. 
 
-[[File:Tutorial.png|link={{filepath:Meeting Minutes Tutorial.swf}}|220px]]
+{{Button|TITLE=Watch the Tutorial|LINK=https://fod2.jsc.nasa.gov/wiki/wikis/eva/images/1/1f/Meeting_Minutes_Tutorial.swf}}
 </div>
 
 <h2>Meeting Details</h2>
@@ -18,6 +27,9 @@ Main Form Definition
 {| class="formtable meeting-minutes-formtable"
 ! Meeting name
 | {{{field|Meeting type|input type=combobox|values from category=Meeting|mandatory}}}
+|-
+! Note-taking group
+| {{{field|Meeting group|input type=tokens|property=Meeting group|mandatory}}}
 |-
 ! Meeting date
 | {{{field|Meeting date|mandatory}}}
@@ -27,6 +39,9 @@ Main Form Definition
 |-
 ! Notes taken by
 | {{{field|Notes taken by|values from category=Person|mandatory|class=meeting-minutes-author-field}}}
+|-
+! Attendee(s)
+| {{{field|Notable attendee(s)|values from category=Person|input type=tokens}}}
 |}
 </div>
 
@@ -67,7 +82,7 @@ Main Form Definition
 -->{{{for template|Topic from meeting|multiple|embed in field=Meeting minutes[Topics]|add button text=Add Topic}}}<div class="instance-wrapper">
 {{{field|Has topic title|class=full-width no-links-allowed title-input-field|placeholder=Topic Title}}}
 
-{{{field|Related article|input type=text with autocomplete|list|values from namespace=Main|class=full-width no-links-allowed|placeholder=Related articles}}}
+{{{field|Related article|input type=text with autocomplete|list|values from namespace=Main|class=full-width no-links-allowed|placeholder=Related articles or SME Teams}}}
 
 {{{field|Full text|input type=textarea|autogrow|class=full-width shrink-on-blur emphasize meeting-topic-full-text|cols=75}}}
 </div>{{{end template}}}<!--
@@ -124,11 +139,4 @@ Local files must be uploaded first. See [[Help:Meeting Minutes|the help page]] f
 {{{standard input|minor edit}}} {{{standard input|watch}}}
 
 {{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
-</includeonly><!--
-
-
-
-  Below is content only shown on the Form:Meeting Minutes page
-
---><noinclude>
-This is the "Meeting Minutes" form. Click edit to make changes to the structure of the form itself. Or [[Special:FormEdit/Meeting_Minutes|create new meeting minutes]].<!--{{#forminput:form=Meeting Minutes}}--></noinclude>
+</includeonly>
