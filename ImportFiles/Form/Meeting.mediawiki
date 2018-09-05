@@ -14,7 +14,7 @@ This is the meeting form, not to be confused with the Meeting Minutes form. This
 {{{for template|Meeting}}}
 <div style="background-color: #ffffff; padding:15px; border:5px solid #f2f2f2;">
 <p style="padding:5px; border-left: 10px solid #33ccff; background-color: #e6f9ff;"><font size="5">'''Infobox'''</font></p>
-''Data entered into this section of the form will appear in the page's infobox. All of this data can be queried to other pages.'' 
+''Data entered into this section of the form will appear in the page's infobox. All of this data can be queried to other pages.''
 {| class="formtable"
 ! Meeting Title:
 | {{{field|Meeting title|mandatory|input type=text}}}
@@ -38,7 +38,7 @@ This is the meeting form, not to be confused with the Meeting Minutes form. This
 | {{{field|Call-in password|input type=text}}}
 |-
 ! Standard group representative(s):
-| {{{field|Standard group representative(s)|input type=textarea with autocomplete|values from category=Person}}}
+| {{{field|Standard group representative(s)|input type=tokens|values from category=Person}}}
 |-
 ! Managed by:
 | {{{field|Managed by cadre(s)|input type=text}}}

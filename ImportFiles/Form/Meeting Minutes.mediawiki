@@ -17,7 +17,7 @@ Main Form Definition
 -->
 <div class="meeting-minutes-save-often">
 <h3>Remember...</h3>
-'''[[FOD:Save Often|Save often or use a text editor]]'''. Revisions are free. 
+'''[[FOD:Save Often|Save often or use a text editor]]'''. Revisions are free.
 
 {{Button|TITLE=Watch the Tutorial|LINK=https://fod2.jsc.nasa.gov/wiki/wikis/eva/images/1/1f/Meeting_Minutes_Tutorial.swf}}
 </div>
@@ -46,7 +46,7 @@ Main Form Definition
 </div>
 
 <h2>Meeting Files</h2>
-{{{field|Meeting files|holds template}}}<!-- 
+{{{field|Meeting files|holds template}}}<!--
 
 
 
@@ -82,7 +82,7 @@ Main Form Definition
 -->{{{for template|Topic from meeting|multiple|embed in field=Meeting minutes[Topics]|add button text=Add Topic}}}<div class="instance-wrapper">
 {{{field|Has topic title|class=full-width no-links-allowed title-input-field|placeholder=Topic Title}}}
 
-{{{field|Related article|input type=text with autocomplete|list|values from namespace=Main|class=full-width no-links-allowed|placeholder=Related articles or SME Teams}}}
+{{{field|Related article|input type=tokens|values from namespace=Main|class=full-width no-links-allowed|placeholder=Related articles or SME Teams}}}
 
 {{{field|Full text|input type=textarea|autogrow|class=full-width shrink-on-blur emphasize meeting-topic-full-text|cols=75}}}
 </div>{{{end template}}}<!--
