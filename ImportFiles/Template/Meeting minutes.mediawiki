@@ -59,6 +59,39 @@
 ! Attendee(s)
 | {{#arraymap:{{{Notable attendee(s)|}}}|,|x|[[Notable attendee::x]]|<br/>}}
 |-
+! style="text-align: center; background-color:#ccccff;" colspan="2" |<big>Previous/Next Minutes</big>
+|-
+|<big><big>'''←'''</big></big> [[{{#ask: [[Category:Meeting Minutes]][[Meeting type::{{{Meeting type|}}}]][[Meeting date::<<{{{Meeting date|}}}]]
+| limit =1
+| sort = Meeting date
+| order = desc
+| searchlabel=
+| link=none
+}}|{{#ask: [[Category:Meeting Minutes]][[Meeting type::{{{Meeting type|}}}]][[Meeting date::<<{{{Meeting date|}}}]]
+|?Meeting date=
+|mainlabel=-
+| limit =1
+| sort = Meeting date
+| order = desc
+| searchlabel=
+| link=none
+}}]]
+|style="text-align: right;"| {{#if:{{#ask: [[Category:Meeting Minutes]][[Meeting type::{{{Meeting type|}}}]][[Meeting date::>>{{{Meeting date|}}}]]}}|[[{{#ask: [[Category:Meeting Minutes]][[Meeting type::{{{Meeting type|}}}]][[Meeting date::>>{{{Meeting date|}}}]]
+| limit =1
+| sort = Meeting date
+| order = asc
+| searchlabel=
+|link=none
+}}|{{#ask: [[Category:Meeting Minutes]][[Meeting type::{{{Meeting type|}}}]][[Meeting date::>>{{{Meeting date|}}}]]
+|?Meeting date=
+|mainlabel=-
+| limit =1
+| sort = Meeting date
+| order = asc
+| searchlabel=
+|link=none
+}}]]| [[Special:FormEdit/Meeting Minutes|Create Next Meeting]] }} <big><big>'''→'''</big></big>
+|-
 ! style="text-align: center; background-color:#ccccff;" colspan="2" |<big>Meeting Documents</big>
 |-
 | colspan="2" | {{#if: {{{Meeting files|}}} | {{{Meeting files|}}} | No documents }}
